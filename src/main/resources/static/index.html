@@ -3,9 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <title>VSAT Washer</title>
+    <!-- версия для разработки, включает отображение полезных предупреждений в консоли -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue-resource@1.5.1"></script>
 </head>
 <body>
 <h3>VSAT Washer</h3>
+<!--<div id="#app"> {{ message }}</div>-->
+<!--<script src="/js/main.js"></script>-->
 
+<div id="app-2">
+  <span v-bind:title="message">
+    Наведи на меня курсор на пару секунд,
+    чтобы увидеть динамически связанное значение title!
+  </span>
+</div>
+
+<div id="app-3">
+    <span v-if="seen">Сейчас меня видно</span>
+</div>
+
+<div id="app-4">
+    <ol>
+        <li v-for="todo in todos">
+            {{ todo.text }}
+        </li>
+    </ol>
+</div>
+
+<div id="app-7">
+    <ol>
+        <!--
+          Теперь мы можем передать каждому компоненту todo-item объект
+          с информацией о задаче, который будет динамически меняться.
+          Мы также определяем для каждого компонента "key",
+          значение которого мы разберём далее в руководстве.
+        -->
+        <stations-item
+                v-for="item in groceryList"
+                v-bind:stations="item"
+                v-bind:key="item.id"
+        ></stations-item>
+    </ol>
+</div>
+
+<script src="/js/main.js"></script>
 </body>
 </html>
