@@ -20,6 +20,7 @@ public class StationService {
 
 
     ArrayList<Station> stations;
+
     Logger log = LoggerFactory.getLogger(StationService.class);
 
     @Autowired
