@@ -15,11 +15,4 @@ public class VsatApplication {
                 .headless (false)
                 .run (args);
     }
-
-
-    @Bean
-    public Gui gui() {
-        return new Gui();
-    }
-
 }
