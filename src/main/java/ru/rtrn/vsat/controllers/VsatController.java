@@ -61,16 +61,12 @@ public class VsatController {
 //        return message;
 //    }
 //
-//    @PutMapping("{id}")
-//    public Map<String, String> update(@PathVariable String id, @RequestBody Map<String, String> message) {
-//        Map<String, String> messageFromDb = getMessage(id);
-//
-//        messageFromDb.putAll(message);
-//        messageFromDb.put("id", id);
-//
-//        return messageFromDb;
-//    }
-//
+    @PutMapping("{id}")
+    public void update(
+            @RequestBody String station
+    ) throws IOException, InterruptedException {
+        stationService.stopWashing(station);
+    }
 //    @DeleteMapping("{id}")
 //    public void delete(@PathVariable String id) {
 //        Map<String, String> message = getMessage(id);
@@ -79,9 +75,15 @@ public class VsatController {
 //    }
 
 
+//    @GetMapping
+//    public List<Station> list() {
+//        return stationService.getStations();
+//    }
+
+
     @GetMapping
-    public List<Station> list() {
-        return stationService.getStations();
+    public Map<String, Station> list() {
+        return stationService.getMapStations();
     }
 
 }

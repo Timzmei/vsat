@@ -65,10 +65,35 @@ Vue.component('message-row', {
 //    )
 //  }
 //})
-
+Vue.component('message-row', {
+    props: ['message', 'editMethod', 'messages', 'columnNames'],
+    template: '<tr :key="message.id">' +
+               '<td v-for="column in columnNames">{{message[column]}}</td>' +
+               '<span style="position: absolute">' +
+               '<input type="button" value="Wash" @click="edit" />' +
+               '</span>' +
+               '</tr>',
+    methods: {
+        edit: function() {
+            this.editMethod(this.message);
+        },
+        del: function() {
+            messageApi.remove({id: this.message.id}).then(result => {
+                if (result.ok) {
+                    this.messages.splice(this.messages.indexOf(this.message), 1)
+                }
+            })
+        }
+    }
+});
 
 Vue.component('messages-list', {
   props: ['messages'],
+  data: function() {
+    return {
+       message: null
+    }
+  },
   template: '<div><table id="Stations" class="table">' +
                     '<thead>' +
                       '<tr>' +
@@ -76,12 +101,16 @@ Vue.component('messages-list', {
                         '</tr>' +
                         '</thead>' +
                         '<tbody>' +
-                        '<tr v-for="row in messages" :key="row.id">' +
-                        '<td v-for="column in columnNames">{{row[column]}}</td>' +
-                        '</tr>' +
+                        '<message-row v-for="message in messages" :key="message.id" :message="message" ' +
+                        ':editMethod="editMethod" :messages="messages" :columnNames="columnNames" />' +
                     '</tbody>' +
                   '</table>' +
             '</div>',
+  methods: {
+      editMethod: function(message) {
+          this.message = message;
+      }
+    },
   computed: {
         columnNames: function() {
           const names = new Set();
@@ -98,21 +127,26 @@ Vue.component('messages-list', {
         {
             console.log(result)
             result.json().then(data =>
-                data.forEach(message =>
                 {
-                    stations.set(message.id, makeStations(
-                        message.id,
-                        message.name,
-                        message.ip,
-                        message.value,
-                        message.rele,
-                        message.status
-                    ))
-                    this.messages.push(message)
-                })
+                console.log(data)
+                let map = new Map(Object.entries(data));
+                console.log(map)
+                map.forEach(message =>
+                    {
+//                        stations.set(message.id, makeStations(
+//                            message.id,
+//                            message.name,
+//                            message.ip,
+//                            message.value,
+//                            message.rele,
+//                            message.status
+//                        ))
+                        this.messages.push(message)
+                    })
+                }
             )
             console.log(this.messages)
-            console.log(stations)
+//            console.log(this.st)
 
         }
     )
