@@ -222,3 +222,163 @@
 2023-02-14 02:17:26 - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2023-02-14 02:17:26 - Initializing Servlet 'dispatcherServlet'
 2023-02-14 02:17:26 - Completed initialization in 2 ms
+2023-02-14 02:29:31 - Starting VsatApplication using Java 18.0.2.1 with PID 1146458 (/home/timurg/Документы/RTRS/vsat/target/classes started by timurg in /home/timurg/Документы/RTRS/vsat)
+2023-02-14 02:29:31 - No active profile set, falling back to 1 default profile: "default"
+2023-02-14 02:29:31 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-14 02:29:31 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-14 02:29:32 - Tomcat initialized with port(s): 8088 (http)
+2023-02-14 02:29:32 - Starting service [Tomcat]
+2023-02-14 02:29:32 - Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-02-14 02:29:32 - Initializing Spring embedded WebApplicationContext
+2023-02-14 02:29:32 - Root WebApplicationContext: initialization completed in 1454 ms
+2023-02-14 02:29:33 - Adding welcome page: class path resource [static/index.html]
+2023-02-14 02:29:33 - LiveReload server is running on port 35729
+2023-02-14 02:29:33 - Tomcat started on port(s): 8088 (http) with context path ''
+2023-02-14 02:29:33 - Started VsatApplication in 3.228 seconds (process running for 3.866)
+2023-02-14 02:30:50 - Starting VsatApplication using Java 18.0.2.1 with PID 1146762 (/home/timurg/Документы/RTRS/vsat/target/classes started by timurg in /home/timurg/Документы/RTRS/vsat)
+2023-02-14 02:30:50 - No active profile set, falling back to 1 default profile: "default"
+2023-02-14 02:30:50 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-14 02:30:50 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-14 02:30:52 - Tomcat initialized with port(s): 8088 (http)
+2023-02-14 02:30:52 - Starting service [Tomcat]
+2023-02-14 02:30:52 - Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-02-14 02:30:52 - Initializing Spring embedded WebApplicationContext
+2023-02-14 02:30:52 - Root WebApplicationContext: initialization completed in 1330 ms
+2023-02-14 02:30:52 - Adding welcome page: class path resource [static/index.html]
+2023-02-14 02:30:53 - LiveReload server is running on port 35729
+2023-02-14 02:30:53 - Tomcat started on port(s): 8088 (http) with context path ''
+2023-02-14 02:30:53 - Started VsatApplication in 2.939 seconds (process running for 3.58)
+2023-02-14 02:31:19 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-14 02:31:19 - Initializing Servlet 'dispatcherServlet'
+2023-02-14 02:31:19 - Completed initialization in 1 ms
+2023-02-14 02:32:12 - Starting VsatApplication using Java 18.0.2.1 with PID 1147115 (/home/timurg/Документы/RTRS/vsat/target/classes started by timurg in /home/timurg/Документы/RTRS/vsat)
+2023-02-14 02:32:12 - No active profile set, falling back to 1 default profile: "default"
+2023-02-14 02:32:13 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-14 02:32:13 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-14 02:32:14 - Tomcat initialized with port(s): 8088 (http)
+2023-02-14 02:32:14 - Starting service [Tomcat]
+2023-02-14 02:32:14 - Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-02-14 02:32:14 - Initializing Spring embedded WebApplicationContext
+2023-02-14 02:32:14 - Root WebApplicationContext: initialization completed in 1322 ms
+2023-02-14 02:32:15 - Adding welcome page: class path resource [static/index.html]
+2023-02-14 02:32:15 - LiveReload server is running on port 35729
+2023-02-14 02:32:15 - Tomcat started on port(s): 8088 (http) with context path ''
+2023-02-14 02:32:15 - Started VsatApplication in 3.013 seconds (process running for 3.724)
+2023-02-14 02:32:22 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-14 02:32:22 - Initializing Servlet 'dispatcherServlet'
+2023-02-14 02:32:22 - Completed initialization in 1 ms
+2023-02-14 02:37:02 - Starting VsatApplication using Java 18.0.2.1 with PID 1148006 (/home/timurg/Документы/RTRS/vsat/target/classes started by timurg in /home/timurg/Документы/RTRS/vsat)
+2023-02-14 02:37:02 - No active profile set, falling back to 1 default profile: "default"
+2023-02-14 02:37:02 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-14 02:37:02 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-14 02:37:03 - Tomcat initialized with port(s): 8088 (http)
+2023-02-14 02:37:03 - Starting service [Tomcat]
+2023-02-14 02:37:03 - Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-02-14 02:37:04 - Initializing Spring embedded WebApplicationContext
+2023-02-14 02:37:04 - Root WebApplicationContext: initialization completed in 1352 ms
+2023-02-14 02:37:04 - Adding welcome page: class path resource [static/index.html]
+2023-02-14 02:37:04 - LiveReload server is running on port 35729
+2023-02-14 02:37:04 - Tomcat started on port(s): 8088 (http) with context path ''
+2023-02-14 02:37:04 - Started VsatApplication in 2.988 seconds (process running for 3.671)
+2023-02-14 02:37:10 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-14 02:37:10 - Initializing Servlet 'dispatcherServlet'
+2023-02-14 02:37:10 - Completed initialization in 1 ms
+2023-02-14 02:38:43 - Starting VsatApplication using Java 18.0.2.1 with PID 1148379 (/home/timurg/Документы/RTRS/vsat/target/classes started by timurg in /home/timurg/Документы/RTRS/vsat)
+2023-02-14 02:38:43 - No active profile set, falling back to 1 default profile: "default"
+2023-02-14 02:38:43 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-14 02:38:43 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-14 02:38:44 - Tomcat initialized with port(s): 8088 (http)
+2023-02-14 02:38:44 - Starting service [Tomcat]
+2023-02-14 02:38:44 - Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-02-14 02:38:44 - Initializing Spring embedded WebApplicationContext
+2023-02-14 02:38:44 - Root WebApplicationContext: initialization completed in 1362 ms
+2023-02-14 02:38:45 - Adding welcome page: class path resource [static/index.html]
+2023-02-14 02:38:45 - LiveReload server is running on port 35729
+2023-02-14 02:38:45 - Tomcat started on port(s): 8088 (http) with context path ''
+2023-02-14 02:38:45 - Started VsatApplication in 2.967 seconds (process running for 3.656)
+2023-02-14 02:38:51 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-14 02:38:51 - Initializing Servlet 'dispatcherServlet'
+2023-02-14 02:38:51 - Completed initialization in 2 ms
+2023-02-14 02:39:26 - Starting VsatApplication using Java 18.0.2.1 with PID 1148615 (/home/timurg/Документы/RTRS/vsat/target/classes started by timurg in /home/timurg/Документы/RTRS/vsat)
+2023-02-14 02:39:26 - No active profile set, falling back to 1 default profile: "default"
+2023-02-14 02:39:27 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-14 02:39:27 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-14 02:39:28 - Tomcat initialized with port(s): 8088 (http)
+2023-02-14 02:39:28 - Starting service [Tomcat]
+2023-02-14 02:39:28 - Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-02-14 02:39:28 - Initializing Spring embedded WebApplicationContext
+2023-02-14 02:39:28 - Root WebApplicationContext: initialization completed in 1326 ms
+2023-02-14 02:39:29 - Adding welcome page: class path resource [static/index.html]
+2023-02-14 02:39:29 - LiveReload server is running on port 35729
+2023-02-14 02:39:29 - Tomcat started on port(s): 8088 (http) with context path ''
+2023-02-14 02:39:29 - Started VsatApplication in 3.098 seconds (process running for 3.796)
+2023-02-14 02:39:34 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-14 02:39:34 - Initializing Servlet 'dispatcherServlet'
+2023-02-14 02:39:34 - Completed initialization in 1 ms
+2023-02-14 02:40:25 - Starting VsatApplication using Java 18.0.2.1 with PID 1148876 (/home/timurg/Документы/RTRS/vsat/target/classes started by timurg in /home/timurg/Документы/RTRS/vsat)
+2023-02-14 02:40:25 - No active profile set, falling back to 1 default profile: "default"
+2023-02-14 02:40:25 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-14 02:40:25 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-14 02:40:27 - Tomcat initialized with port(s): 8088 (http)
+2023-02-14 02:40:27 - Starting service [Tomcat]
+2023-02-14 02:40:27 - Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-02-14 02:40:27 - Initializing Spring embedded WebApplicationContext
+2023-02-14 02:40:27 - Root WebApplicationContext: initialization completed in 1435 ms
+2023-02-14 02:40:27 - Adding welcome page: class path resource [static/index.html]
+2023-02-14 02:40:28 - LiveReload server is running on port 35729
+2023-02-14 02:40:28 - Tomcat started on port(s): 8088 (http) with context path ''
+2023-02-14 02:40:28 - Started VsatApplication in 3.122 seconds (process running for 3.839)
+2023-02-14 02:40:33 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-14 02:40:33 - Initializing Servlet 'dispatcherServlet'
+2023-02-14 02:40:33 - Completed initialization in 2 ms
+2023-02-14 02:40:36 - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PUT' is not supported]
+2023-02-14 02:42:27 - Starting VsatApplication using Java 18.0.2.1 with PID 1149336 (/home/timurg/Документы/RTRS/vsat/target/classes started by timurg in /home/timurg/Документы/RTRS/vsat)
+2023-02-14 02:42:27 - No active profile set, falling back to 1 default profile: "default"
+2023-02-14 02:42:27 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-14 02:42:27 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-14 02:42:29 - Tomcat initialized with port(s): 8088 (http)
+2023-02-14 02:42:29 - Starting service [Tomcat]
+2023-02-14 02:42:29 - Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-02-14 02:42:29 - Initializing Spring embedded WebApplicationContext
+2023-02-14 02:42:29 - Root WebApplicationContext: initialization completed in 1404 ms
+2023-02-14 02:42:30 - Adding welcome page: class path resource [static/index.html]
+2023-02-14 02:42:30 - LiveReload server is running on port 35729
+2023-02-14 02:42:30 - Tomcat started on port(s): 8088 (http) with context path ''
+2023-02-14 02:42:30 - Started VsatApplication in 3.079 seconds (process running for 3.78)
+2023-02-14 02:42:36 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-14 02:42:36 - Initializing Servlet 'dispatcherServlet'
+2023-02-14 02:42:36 - Completed initialization in 2 ms
+2023-02-14 02:43:06 - Starting VsatApplication using Java 18.0.2.1 with PID 1149557 (/home/timurg/Документы/RTRS/vsat/target/classes started by timurg in /home/timurg/Документы/RTRS/vsat)
+2023-02-14 02:43:06 - No active profile set, falling back to 1 default profile: "default"
+2023-02-14 02:43:06 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-14 02:43:06 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-14 02:43:08 - Tomcat initialized with port(s): 8088 (http)
+2023-02-14 02:43:08 - Starting service [Tomcat]
+2023-02-14 02:43:08 - Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-02-14 02:43:08 - Initializing Spring embedded WebApplicationContext
+2023-02-14 02:43:08 - Root WebApplicationContext: initialization completed in 1567 ms
+2023-02-14 02:43:09 - Adding welcome page: class path resource [static/index.html]
+2023-02-14 02:43:09 - LiveReload server is running on port 35729
+2023-02-14 02:43:09 - Tomcat started on port(s): 8088 (http) with context path ''
+2023-02-14 02:43:09 - Started VsatApplication in 3.292 seconds (process running for 4.007)
+2023-02-14 02:43:10 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-14 02:43:10 - Initializing Servlet 'dispatcherServlet'
+2023-02-14 02:43:10 - Completed initialization in 2 ms
+2023-02-14 02:43:12 - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PUT' is not supported]
+2023-02-14 02:45:12 - Starting VsatApplication using Java 18.0.2.1 with PID 1150036 (/home/timurg/Документы/RTRS/vsat/target/classes started by timurg in /home/timurg/Документы/RTRS/vsat)
+2023-02-14 02:45:12 - No active profile set, falling back to 1 default profile: "default"
+2023-02-14 02:45:12 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-14 02:45:12 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-14 02:45:13 - Tomcat initialized with port(s): 8088 (http)
+2023-02-14 02:45:13 - Starting service [Tomcat]
+2023-02-14 02:45:13 - Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-02-14 02:45:13 - Initializing Spring embedded WebApplicationContext
+2023-02-14 02:45:13 - Root WebApplicationContext: initialization completed in 1378 ms
+2023-02-14 02:45:14 - Adding welcome page: class path resource [static/index.html]
+2023-02-14 02:45:14 - LiveReload server is running on port 35729
+2023-02-14 02:45:14 - Tomcat started on port(s): 8088 (http) with context path ''
+2023-02-14 02:45:14 - Started VsatApplication in 3.056 seconds (process running for 3.713)
+2023-02-14 02:45:22 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-14 02:45:22 - Initializing Servlet 'dispatcherServlet'
+2023-02-14 02:45:22 - Completed initialization in 2 ms
+2023-02-14 02:45:24 - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PUT' is not supported]

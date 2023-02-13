@@ -70,7 +70,7 @@ Vue.component('message-row', {
     template: '<tr :key="message.id">' +
                '<td v-for="column in columnNames">{{message[column]}}</td>' +
                '<span style="position: absolute">' +
-               '<input type="button" value="Wash" @click="edit" />' +
+               '<input type="button" value="Wash" @click="save" />' +
                '</span>' +
                '</tr>',
     methods: {
@@ -83,6 +83,13 @@ Vue.component('message-row', {
                     this.messages.splice(this.messages.indexOf(this.message), 1)
                 }
             })
+        },
+        save: function() {
+           var id = this.message.id;
+           messageApi.update({id}).then(result =>
+              console.log(result)
+
+          )
         }
     }
 });

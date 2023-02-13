@@ -61,7 +61,7 @@ public class VsatController {
 //        return message;
 //    }
 //
-    @PutMapping("{id}")
+    @GetMapping("{id}")
     public void update(
             @RequestBody String station
     ) throws IOException, InterruptedException {
