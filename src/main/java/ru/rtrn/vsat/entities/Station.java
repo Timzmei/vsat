@@ -12,6 +12,6 @@ public class Station {
     String value;
     String rele;
     String status;
-    String wash;
+//    String wash;
 
 }

@@ -1,3 +1,4 @@
+
 var app = new Vue({
   el: '#app',
   data: {
@@ -70,7 +71,7 @@ Vue.component('message-row', {
     template: '<tr :key="message.id">' +
                '<td v-for="column in columnNames">{{message[column]}}</td>' +
                '<span style="position: absolute">' +
-               '<input type="button" value="Wash" @click="save" />' +
+               '<input type="button" value="Wash" @click="wash" />' +
                '</span>' +
                '</tr>',
     methods: {
@@ -84,10 +85,25 @@ Vue.component('message-row', {
                 }
             })
         },
-        save: function() {
+        wash: function() {
+           var message = { text: this.text };
            var id = this.message.id;
-           messageApi.update({id}).then(result =>
-              console.log(result)
+           messageApi.update({id}, this.message).then(result =>
+           {
+               console.log("method wash")
+               console.log(result)
+//               result.json().then(data => {
+//                   console.log(data);
+////                   this.messages.splice(data.id, 1, data);
+////                   this.text = ''
+////                   this.id = ''
+//               })
+//               console.log(this.text)
+//               console.log(this.id)
+
+               console.log(result)
+           }
+
 
           )
         }
@@ -135,9 +151,9 @@ Vue.component('messages-list', {
             console.log(result)
             result.json().then(data =>
                 {
-                console.log(data)
+//                console.log(data)
                 let map = new Map(Object.entries(data));
-                console.log(map)
+//                console.log(map)
                 map.forEach(message =>
                     {
 //                        stations.set(message.id, makeStations(
@@ -152,7 +168,7 @@ Vue.component('messages-list', {
                     })
                 }
             )
-            console.log(this.messages)
+//            console.log(this.messages)
 //            console.log(this.st)
 
         }

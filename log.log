@@ -382,3 +382,1364 @@
 2023-02-14 02:45:22 - Initializing Servlet 'dispatcherServlet'
 2023-02-14 02:45:22 - Completed initialization in 2 ms
 2023-02-14 02:45:24 - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PUT' is not supported]
+2023-02-14 19:31:30 - Starting VsatApplication using Java 18.0.2.1 with PID 1152809 (/home/timurg/Документы/RTRS/vsat/target/classes started by timurg in /home/timurg/Документы/RTRS/vsat)
+2023-02-14 19:31:30 - No active profile set, falling back to 1 default profile: "default"
+2023-02-14 19:31:30 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-14 19:31:30 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-14 19:31:33 - Tomcat initialized with port(s): 8088 (http)
+2023-02-14 19:31:33 - Starting service [Tomcat]
+2023-02-14 19:31:33 - Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-02-14 19:31:33 - Initializing Spring embedded WebApplicationContext
+2023-02-14 19:31:33 - Root WebApplicationContext: initialization completed in 2491 ms
+2023-02-14 19:31:34 - Adding welcome page: class path resource [static/index.html]
+2023-02-14 19:31:34 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'vsatController' method 
+ru.rtrn.vsat.controllers.VsatController#getOne(String)
+to {GET [/stations/{id}]}: There is already 'vsatController' bean method
+ru.rtrn.vsat.controllers.VsatController#update(String) mapped.
+2023-02-14 19:31:34 - Stopping service [Tomcat]
+2023-02-14 19:31:34 - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-02-14 19:31:34 - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'vsatController' method 
+ru.rtrn.vsat.controllers.VsatController#getOne(String)
+to {GET [/stations/{id}]}: There is already 'vsatController' bean method
+ru.rtrn.vsat.controllers.VsatController#update(String) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1751)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:961)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:915)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:432)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:150)
+	at ru.rtrn.vsat.VsatApplication.main(VsatApplication.java:16)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'vsatController' method 
+ru.rtrn.vsat.controllers.VsatController#getOne(String)
+to {GET [/stations/{id}]}: There is already 'vsatController' bean method
+ru.rtrn.vsat.controllers.VsatController#update(String) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:667)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:633)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:331)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:438)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:76)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:298)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:296)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:265)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:224)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:212)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:225)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1797)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1747)
+	... 18 common frames omitted
+2023-02-14 19:33:07 - Starting VsatApplication using Java 18.0.2.1 with PID 1153155 (/home/timurg/Документы/RTRS/vsat/target/classes started by timurg in /home/timurg/Документы/RTRS/vsat)
+2023-02-14 19:33:07 - No active profile set, falling back to 1 default profile: "default"
+2023-02-14 19:33:07 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-14 19:33:07 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-14 19:33:09 - Tomcat initialized with port(s): 8088 (http)
+2023-02-14 19:33:09 - Starting service [Tomcat]
+2023-02-14 19:33:09 - Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-02-14 19:33:09 - Initializing Spring embedded WebApplicationContext
+2023-02-14 19:33:09 - Root WebApplicationContext: initialization completed in 2220 ms
+2023-02-14 19:33:10 - Adding welcome page: class path resource [static/index.html]
+2023-02-14 19:33:10 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'vsatController' method 
+ru.rtrn.vsat.controllers.VsatController#getMessage(String)
+to {GET [/stations/{id}]}: There is already 'vsatController' bean method
+ru.rtrn.vsat.controllers.VsatController#update(String) mapped.
+2023-02-14 19:33:10 - Stopping service [Tomcat]
+2023-02-14 19:33:11 - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-02-14 19:33:11 - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'vsatController' method 
+ru.rtrn.vsat.controllers.VsatController#getMessage(String)
+to {GET [/stations/{id}]}: There is already 'vsatController' bean method
+ru.rtrn.vsat.controllers.VsatController#update(String) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1751)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:961)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:915)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:432)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:150)
+	at ru.rtrn.vsat.VsatApplication.main(VsatApplication.java:16)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'vsatController' method 
+ru.rtrn.vsat.controllers.VsatController#getMessage(String)
+to {GET [/stations/{id}]}: There is already 'vsatController' bean method
+ru.rtrn.vsat.controllers.VsatController#update(String) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:667)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:633)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:331)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:438)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:76)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:298)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:296)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:265)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:224)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:212)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:225)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1797)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1747)
+	... 18 common frames omitted
+2023-02-14 19:34:26 - Starting VsatApplication using Java 18.0.2.1 with PID 1153504 (/home/timurg/Документы/RTRS/vsat/target/classes started by timurg in /home/timurg/Документы/RTRS/vsat)
+2023-02-14 19:34:26 - No active profile set, falling back to 1 default profile: "default"
+2023-02-14 19:34:27 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-14 19:34:27 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-14 19:34:29 - Tomcat initialized with port(s): 8088 (http)
+2023-02-14 19:34:29 - Starting service [Tomcat]
+2023-02-14 19:34:29 - Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-02-14 19:34:29 - Initializing Spring embedded WebApplicationContext
+2023-02-14 19:34:29 - Root WebApplicationContext: initialization completed in 2239 ms
+2023-02-14 19:34:30 - Adding welcome page: class path resource [static/index.html]
+2023-02-14 19:34:30 - LiveReload server is running on port 35729
+2023-02-14 19:34:30 - Tomcat started on port(s): 8088 (http) with context path ''
+2023-02-14 19:34:30 - Started VsatApplication in 4.99 seconds (process running for 5.977)
+2023-02-14 19:38:24 - Starting VsatApplication using Java 18.0.2.1 with PID 1154491 (/home/timurg/Документы/RTRS/vsat/target/classes started by timurg in /home/timurg/Документы/RTRS/vsat)
+2023-02-14 19:38:24 - No active profile set, falling back to 1 default profile: "default"
+2023-02-14 19:38:24 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-14 19:38:24 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-14 19:38:27 - Tomcat initialized with port(s): 8088 (http)
+2023-02-14 19:38:27 - Starting service [Tomcat]
+2023-02-14 19:38:27 - Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-02-14 19:38:27 - Initializing Spring embedded WebApplicationContext
+2023-02-14 19:38:27 - Root WebApplicationContext: initialization completed in 2414 ms
+2023-02-14 19:38:28 - Adding welcome page: class path resource [static/index.html]
+2023-02-14 19:38:28 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'vsatController' method 
+ru.rtrn.vsat.controllers.VsatController#getOne(String)
+to {GET [/stations/{id}]}: There is already 'vsatController' bean method
+ru.rtrn.vsat.controllers.VsatController#update(String) mapped.
+2023-02-14 19:38:28 - Stopping service [Tomcat]
+2023-02-14 19:38:28 - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-02-14 19:38:28 - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'vsatController' method 
+ru.rtrn.vsat.controllers.VsatController#getOne(String)
+to {GET [/stations/{id}]}: There is already 'vsatController' bean method
+ru.rtrn.vsat.controllers.VsatController#update(String) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1751)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:961)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:915)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:432)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:150)
+	at ru.rtrn.vsat.VsatApplication.main(VsatApplication.java:16)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'vsatController' method 
+ru.rtrn.vsat.controllers.VsatController#getOne(String)
+to {GET [/stations/{id}]}: There is already 'vsatController' bean method
+ru.rtrn.vsat.controllers.VsatController#update(String) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:667)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:633)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:331)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:438)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:76)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:298)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:296)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:265)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:224)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:212)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:225)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1797)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1747)
+	... 18 common frames omitted
+2023-02-14 19:39:13 - Starting VsatApplication using Java 18.0.2.1 with PID 1154707 (/home/timurg/Документы/RTRS/vsat/target/classes started by timurg in /home/timurg/Документы/RTRS/vsat)
+2023-02-14 19:39:13 - No active profile set, falling back to 1 default profile: "default"
+2023-02-14 19:39:13 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-14 19:39:13 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-14 19:39:15 - Tomcat initialized with port(s): 8088 (http)
+2023-02-14 19:39:15 - Starting service [Tomcat]
+2023-02-14 19:39:15 - Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-02-14 19:39:16 - Initializing Spring embedded WebApplicationContext
+2023-02-14 19:39:16 - Root WebApplicationContext: initialization completed in 2314 ms
+2023-02-14 19:39:17 - Adding welcome page: class path resource [static/index.html]
+2023-02-14 19:39:17 - LiveReload server is running on port 35729
+2023-02-14 19:39:17 - Tomcat started on port(s): 8088 (http) with context path ''
+2023-02-14 19:39:17 - Started VsatApplication in 5.221 seconds (process running for 6.189)
+2023-02-14 19:39:39 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-14 19:39:39 - Initializing Servlet 'dispatcherServlet'
+2023-02-14 19:39:39 - Completed initialization in 6 ms
+2023-02-14 19:39:45 - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PUT' is not supported]
+2023-02-14 19:42:02 - Starting VsatApplication using Java 18.0.2.1 with PID 1155289 (/home/timurg/Документы/RTRS/vsat/target/classes started by timurg in /home/timurg/Документы/RTRS/vsat)
+2023-02-14 19:42:02 - No active profile set, falling back to 1 default profile: "default"
+2023-02-14 19:42:02 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-14 19:42:02 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-14 19:42:04 - Tomcat initialized with port(s): 8088 (http)
+2023-02-14 19:42:04 - Starting service [Tomcat]
+2023-02-14 19:42:04 - Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-02-14 19:42:04 - Initializing Spring embedded WebApplicationContext
+2023-02-14 19:42:04 - Root WebApplicationContext: initialization completed in 2488 ms
+2023-02-14 19:42:06 - Adding welcome page: class path resource [static/index.html]
+2023-02-14 19:42:06 - LiveReload server is running on port 35729
+2023-02-14 19:42:06 - Tomcat started on port(s): 8088 (http) with context path ''
+2023-02-14 19:42:06 - Started VsatApplication in 5.277 seconds (process running for 6.312)
+2023-02-14 19:42:10 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-14 19:42:10 - Initializing Servlet 'dispatcherServlet'
+2023-02-14 19:42:10 - Completed initialization in 2 ms
+2023-02-14 19:42:53 - Starting VsatApplication using Java 18.0.2.1 with PID 1155561 (/home/timurg/Документы/RTRS/vsat/target/classes started by timurg in /home/timurg/Документы/RTRS/vsat)
+2023-02-14 19:42:53 - No active profile set, falling back to 1 default profile: "default"
+2023-02-14 19:42:53 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-14 19:42:53 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-14 19:42:55 - Tomcat initialized with port(s): 8088 (http)
+2023-02-14 19:42:55 - Starting service [Tomcat]
+2023-02-14 19:42:55 - Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-02-14 19:42:55 - Initializing Spring embedded WebApplicationContext
+2023-02-14 19:42:55 - Root WebApplicationContext: initialization completed in 2380 ms
+2023-02-14 19:42:56 - Adding welcome page: class path resource [static/index.html]
+2023-02-14 19:42:57 - LiveReload server is running on port 35729
+2023-02-14 19:42:57 - Tomcat started on port(s): 8088 (http) with context path ''
+2023-02-14 19:42:57 - Started VsatApplication in 5.293 seconds (process running for 6.302)
+2023-02-14 19:43:38 - Starting VsatApplication using Java 18.0.2.1 with PID 1155785 (/home/timurg/Документы/RTRS/vsat/target/classes started by timurg in /home/timurg/Документы/RTRS/vsat)
+2023-02-14 19:43:38 - No active profile set, falling back to 1 default profile: "default"
+2023-02-14 19:43:39 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-14 19:43:39 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-14 19:43:41 - Tomcat initialized with port(s): 8088 (http)
+2023-02-14 19:43:41 - Starting service [Tomcat]
+2023-02-14 19:43:41 - Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-02-14 19:43:41 - Initializing Spring embedded WebApplicationContext
+2023-02-14 19:43:41 - Root WebApplicationContext: initialization completed in 2262 ms
+2023-02-14 19:43:42 - Adding welcome page: class path resource [static/index.html]
+2023-02-14 19:43:42 - LiveReload server is running on port 35729
+2023-02-14 19:43:42 - Tomcat started on port(s): 8088 (http) with context path ''
+2023-02-14 19:43:42 - Started VsatApplication in 5.149 seconds (process running for 6.149)
+2023-02-14 19:43:51 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-14 19:43:51 - Initializing Servlet 'dispatcherServlet'
+2023-02-14 19:43:51 - Completed initialization in 2 ms
+2023-02-14 19:43:55 - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PUT' is not supported]
+2023-02-14 19:45:02 - Starting VsatApplication using Java 18.0.2.1 with PID 1156136 (/home/timurg/Документы/RTRS/vsat/target/classes started by timurg in /home/timurg/Документы/RTRS/vsat)
+2023-02-14 19:45:02 - No active profile set, falling back to 1 default profile: "default"
+2023-02-14 19:45:02 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-14 19:45:02 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-14 19:45:05 - Tomcat initialized with port(s): 8088 (http)
+2023-02-14 19:45:05 - Starting service [Tomcat]
+2023-02-14 19:45:05 - Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-02-14 19:45:05 - Initializing Spring embedded WebApplicationContext
+2023-02-14 19:45:05 - Root WebApplicationContext: initialization completed in 2877 ms
+2023-02-14 19:45:06 - Adding welcome page: class path resource [static/index.html]
+2023-02-14 19:45:07 - LiveReload server is running on port 35729
+2023-02-14 19:45:07 - Tomcat started on port(s): 8088 (http) with context path ''
+2023-02-14 19:45:07 - Started VsatApplication in 5.787 seconds (process running for 6.794)
+2023-02-14 19:45:10 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-14 19:45:10 - Initializing Servlet 'dispatcherServlet'
+2023-02-14 19:45:10 - Completed initialization in 3 ms
+2023-02-14 19:45:13 - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PUT' is not supported]
+2023-02-14 19:55:07 - Starting VsatApplication using Java 18.0.2.1 with PID 1157903 (/home/timurg/Документы/RTRS/vsat/target/classes started by timurg in /home/timurg/Документы/RTRS/vsat)
+2023-02-14 19:55:07 - No active profile set, falling back to 1 default profile: "default"
+2023-02-14 19:55:07 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-14 19:55:07 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-14 19:55:09 - Tomcat initialized with port(s): 8088 (http)
+2023-02-14 19:55:09 - Starting service [Tomcat]
+2023-02-14 19:55:09 - Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-02-14 19:55:09 - Initializing Spring embedded WebApplicationContext
+2023-02-14 19:55:09 - Root WebApplicationContext: initialization completed in 2173 ms
+2023-02-14 19:55:10 - Adding welcome page: class path resource [static/index.html]
+2023-02-14 19:55:11 - LiveReload server is running on port 35729
+2023-02-14 19:55:11 - Tomcat started on port(s): 8088 (http) with context path ''
+2023-02-14 19:55:11 - Started VsatApplication in 5.082 seconds (process running for 6.1)
+2023-02-14 19:55:16 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-14 19:55:16 - Initializing Servlet 'dispatcherServlet'
+2023-02-14 19:55:16 - Completed initialization in 10 ms
+2023-02-14 19:55:26 - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PUT' is not supported]
+2023-02-14 20:01:38 - Starting VsatApplication using Java 18.0.2.1 with PID 1159113 (/home/timurg/Документы/RTRS/vsat/target/classes started by timurg in /home/timurg/Документы/RTRS/vsat)
+2023-02-14 20:01:38 - No active profile set, falling back to 1 default profile: "default"
+2023-02-14 20:01:39 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-14 20:01:39 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-14 20:01:41 - Tomcat initialized with port(s): 8088 (http)
+2023-02-14 20:01:41 - Starting service [Tomcat]
+2023-02-14 20:01:41 - Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-02-14 20:01:41 - Initializing Spring embedded WebApplicationContext
+2023-02-14 20:01:41 - Root WebApplicationContext: initialization completed in 2782 ms
+2023-02-14 20:01:43 - Adding welcome page: class path resource [static/index.html]
+2023-02-14 20:01:43 - LiveReload server is running on port 35729
+2023-02-14 20:01:43 - Tomcat started on port(s): 8088 (http) with context path ''
+2023-02-14 20:01:43 - Started VsatApplication in 6.147 seconds (process running for 7.179)
+2023-02-14 20:11:08 - Starting VsatApplication using Java 18.0.2.1 with PID 3370 (/home/timurg/Документы/RTRS/vsat/target/classes started by timurg in /home/timurg/Документы/RTRS/vsat)
+2023-02-14 20:11:08 - No active profile set, falling back to 1 default profile: "default"
+2023-02-14 20:11:08 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-14 20:11:08 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-14 20:11:13 - Tomcat initialized with port(s): 8088 (http)
+2023-02-14 20:11:13 - Starting service [Tomcat]
+2023-02-14 20:11:13 - Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-02-14 20:11:13 - Initializing Spring embedded WebApplicationContext
+2023-02-14 20:11:13 - Root WebApplicationContext: initialization completed in 5077 ms
+2023-02-14 20:11:16 - Adding welcome page: class path resource [static/index.html]
+2023-02-14 20:11:16 - LiveReload server is running on port 35729
+2023-02-14 20:11:16 - Tomcat started on port(s): 8088 (http) with context path ''
+2023-02-14 20:11:17 - Started VsatApplication in 10.125 seconds (process running for 11.763)
+2023-02-14 20:11:23 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-14 20:11:23 - Initializing Servlet 'dispatcherServlet'
+2023-02-14 20:11:23 - Completed initialization in 5 ms
+2023-02-14 20:11:52 - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PUT' is not supported]
+2023-02-14 20:13:12 - Starting VsatApplication using Java 18.0.2.1 with PID 3862 (/home/timurg/Документы/RTRS/vsat/target/classes started by timurg in /home/timurg/Документы/RTRS/vsat)
+2023-02-14 20:13:12 - No active profile set, falling back to 1 default profile: "default"
+2023-02-14 20:13:12 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-14 20:13:12 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-14 20:13:15 - Tomcat initialized with port(s): 8088 (http)
+2023-02-14 20:13:15 - Starting service [Tomcat]
+2023-02-14 20:13:15 - Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-02-14 20:13:15 - Initializing Spring embedded WebApplicationContext
+2023-02-14 20:13:15 - Root WebApplicationContext: initialization completed in 2603 ms
+2023-02-14 20:13:16 - Adding welcome page: class path resource [static/index.html]
+2023-02-14 20:13:16 - LiveReload server is running on port 35729
+2023-02-14 20:13:16 - Tomcat started on port(s): 8088 (http) with context path ''
+2023-02-14 20:13:16 - Started VsatApplication in 5.341 seconds (process running for 6.386)
+2023-02-14 20:13:22 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-14 20:13:22 - Initializing Servlet 'dispatcherServlet'
+2023-02-14 20:13:22 - Completed initialization in 2 ms
+2023-02-14 20:13:31 - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PUT' is not supported]
+2023-02-14 20:19:08 - Starting VsatApplication using Java 18.0.2.1 with PID 5020 (/home/timurg/Документы/RTRS/vsat/target/classes started by timurg in /home/timurg/Документы/RTRS/vsat)
+2023-02-14 20:19:08 - No active profile set, falling back to 1 default profile: "default"
+2023-02-14 20:19:09 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-14 20:19:09 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-14 20:19:10 - Tomcat initialized with port(s): 8088 (http)
+2023-02-14 20:19:10 - Starting service [Tomcat]
+2023-02-14 20:19:10 - Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-02-14 20:19:11 - Initializing Spring embedded WebApplicationContext
+2023-02-14 20:19:11 - Root WebApplicationContext: initialization completed in 1995 ms
+2023-02-14 20:19:11 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-02-14 20:19:11 - Adding welcome page: class path resource [static/index.html]
+2023-02-14 20:19:11 - 6 mappings in 'requestMappingHandlerMapping'
+2023-02-14 20:19:11 - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-02-14 20:19:11 - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-02-14 20:19:12 - LiveReload server is running on port 35729
+2023-02-14 20:19:12 - Tomcat started on port(s): 8088 (http) with context path ''
+2023-02-14 20:19:12 - Started VsatApplication in 4.373 seconds (process running for 5.298)
+2023-02-14 20:19:21 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-14 20:19:21 - Initializing Servlet 'dispatcherServlet'
+2023-02-14 20:19:21 - Detected StandardServletMultipartResolver
+2023-02-14 20:19:21 - Detected AcceptHeaderLocaleResolver
+2023-02-14 20:19:21 - Detected FixedThemeResolver
+2023-02-14 20:19:21 - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@2bf83bcf
+2023-02-14 20:19:21 - Detected org.springframework.web.servlet.support.SessionFlashMapManager@531c3db0
+2023-02-14 20:19:21 - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-02-14 20:19:21 - Completed initialization in 5 ms
+2023-02-14 20:19:21 - GET "/?name=sh+sfh+&description=sgh+frtyunrtynrt", parameters={masked}
+2023-02-14 20:19:21 - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2023-02-14 20:19:21 - View [InternalResourceView], model {}
+2023-02-14 20:19:21 - Forwarding to [index.html]
+2023-02-14 20:19:21 - "FORWARD" dispatch for GET "/index.html?name=sh+sfh+&description=sgh+frtyunrtynrt", parameters={masked}
+2023-02-14 20:19:21 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-02-14 20:19:21 - Exiting from "FORWARD" dispatch, status 200
+2023-02-14 20:19:21 - Completed 200 OK
+2023-02-14 20:19:21 - GET "/js/main.js", parameters={}
+2023-02-14 20:19:21 - GET "/js/style2.css", parameters={}
+2023-02-14 20:19:21 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-02-14 20:19:21 - Completed 200 OK
+2023-02-14 20:19:21 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-02-14 20:19:21 - Completed 200 OK
+2023-02-14 20:19:21 - GET "/stations", parameters={}
+2023-02-14 20:19:21 - Mapped to ru.rtrn.vsat.controllers.VsatController#list()
+2023-02-14 20:19:21 - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-02-14 20:19:21 - Writing [{110=Station(id=110, name=Межгорье_Ю-З, ip=10.2.111.1, value= , rele= , status= , wash=), 111=Statio (truncated)...]
+2023-02-14 20:19:21 - Completed 200 OK
+2023-02-14 20:19:23 - PUT "/stations", parameters={}
+2023-02-14 20:19:23 - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PUT' is not supported]
+2023-02-14 20:19:23 - Completed 405 METHOD_NOT_ALLOWED
+2023-02-14 20:19:23 - "ERROR" dispatch for PUT "/error", parameters={}
+2023-02-14 20:19:23 - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2023-02-14 20:19:23 - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-02-14 20:19:23 - Writing [{timestamp=Tue Feb 14 20:19:23 YEKT 2023, status=405, error=Method Not Allowed, trace=org.springfram (truncated)...]
+2023-02-14 20:19:23 - Exiting from "ERROR" dispatch, status 405
+2023-02-14 20:33:53 - Starting VsatApplication using Java 18.0.2.1 with PID 7711 (/home/timurg/Документы/RTRS/vsat/target/classes started by timurg in /home/timurg/Документы/RTRS/vsat)
+2023-02-14 20:33:53 - No active profile set, falling back to 1 default profile: "default"
+2023-02-14 20:33:53 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-14 20:33:53 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-14 20:33:55 - Tomcat initialized with port(s): 8088 (http)
+2023-02-14 20:33:55 - Starting service [Tomcat]
+2023-02-14 20:33:55 - Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-02-14 20:33:55 - Initializing Spring embedded WebApplicationContext
+2023-02-14 20:33:55 - Root WebApplicationContext: initialization completed in 2021 ms
+2023-02-14 20:33:56 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-02-14 20:33:56 - Adding welcome page: class path resource [static/index.html]
+2023-02-14 20:33:56 - 6 mappings in 'requestMappingHandlerMapping'
+2023-02-14 20:33:56 - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-02-14 20:33:56 - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-02-14 20:33:57 - LiveReload server is running on port 35729
+2023-02-14 20:33:57 - Tomcat started on port(s): 8088 (http) with context path ''
+2023-02-14 20:33:57 - Started VsatApplication in 4.568 seconds (process running for 5.599)
+2023-02-14 20:34:04 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-14 20:34:04 - Initializing Servlet 'dispatcherServlet'
+2023-02-14 20:34:04 - Detected StandardServletMultipartResolver
+2023-02-14 20:34:04 - Detected AcceptHeaderLocaleResolver
+2023-02-14 20:34:04 - Detected FixedThemeResolver
+2023-02-14 20:34:04 - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@2bf83bcf
+2023-02-14 20:34:04 - Detected org.springframework.web.servlet.support.SessionFlashMapManager@531c3db0
+2023-02-14 20:34:04 - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-02-14 20:34:04 - Completed initialization in 5 ms
+2023-02-14 20:34:04 - GET "/?name=sh+sfh+&description=sgh+frtyunrtynrt", parameters={masked}
+2023-02-14 20:34:04 - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2023-02-14 20:34:04 - View [InternalResourceView], model {}
+2023-02-14 20:34:04 - Forwarding to [index.html]
+2023-02-14 20:34:04 - "FORWARD" dispatch for GET "/index.html?name=sh+sfh+&description=sgh+frtyunrtynrt", parameters={masked}
+2023-02-14 20:34:04 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-02-14 20:34:04 - Exiting from "FORWARD" dispatch, status 200
+2023-02-14 20:34:04 - Completed 200 OK
+2023-02-14 20:34:04 - GET "/js/main.js", parameters={}
+2023-02-14 20:34:04 - GET "/js/style2.css", parameters={}
+2023-02-14 20:34:04 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-02-14 20:34:04 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-02-14 20:34:04 - Completed 200 OK
+2023-02-14 20:34:04 - Completed 200 OK
+2023-02-14 20:34:04 - GET "/stations", parameters={}
+2023-02-14 20:34:04 - Mapped to ru.rtrn.vsat.controllers.VsatController#list()
+2023-02-14 20:34:04 - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-02-14 20:34:04 - Writing [{110=Station(id=110, name=Межгорье_Ю-З, ip=10.2.111.1, value= , rele= , status= , wash=), 111=Statio (truncated)...]
+2023-02-14 20:34:04 - Completed 200 OK
+2023-02-14 20:34:06 - PUT "/stations", parameters={}
+2023-02-14 20:34:06 - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PUT' is not supported]
+2023-02-14 20:34:06 - Completed 405 METHOD_NOT_ALLOWED
+2023-02-14 20:34:06 - "ERROR" dispatch for PUT "/error", parameters={}
+2023-02-14 20:34:06 - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2023-02-14 20:34:06 - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-02-14 20:34:06 - Writing [{timestamp=Tue Feb 14 20:34:06 YEKT 2023, status=405, error=Method Not Allowed, trace=org.springfram (truncated)...]
+2023-02-14 20:34:06 - Exiting from "ERROR" dispatch, status 405
+2023-02-14 20:35:03 - Starting VsatApplication using Java 18.0.2.1 with PID 8027 (/home/timurg/Документы/RTRS/vsat/target/classes started by timurg in /home/timurg/Документы/RTRS/vsat)
+2023-02-14 20:35:03 - No active profile set, falling back to 1 default profile: "default"
+2023-02-14 20:35:03 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-14 20:35:03 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-14 20:35:05 - Tomcat initialized with port(s): 8088 (http)
+2023-02-14 20:35:05 - Starting service [Tomcat]
+2023-02-14 20:35:05 - Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-02-14 20:35:05 - Initializing Spring embedded WebApplicationContext
+2023-02-14 20:35:05 - Root WebApplicationContext: initialization completed in 2006 ms
+2023-02-14 20:35:06 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-02-14 20:35:06 - Adding welcome page: class path resource [static/index.html]
+2023-02-14 20:35:06 - 6 mappings in 'requestMappingHandlerMapping'
+2023-02-14 20:35:06 - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-02-14 20:35:06 - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-02-14 20:35:07 - LiveReload server is running on port 35729
+2023-02-14 20:35:07 - Tomcat started on port(s): 8088 (http) with context path ''
+2023-02-14 20:35:07 - Started VsatApplication in 4.557 seconds (process running for 5.489)
+2023-02-14 20:35:12 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-14 20:35:12 - Initializing Servlet 'dispatcherServlet'
+2023-02-14 20:35:12 - Detected StandardServletMultipartResolver
+2023-02-14 20:35:12 - Detected AcceptHeaderLocaleResolver
+2023-02-14 20:35:12 - Detected FixedThemeResolver
+2023-02-14 20:35:12 - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@2bf83bcf
+2023-02-14 20:35:12 - Detected org.springframework.web.servlet.support.SessionFlashMapManager@531c3db0
+2023-02-14 20:35:12 - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-02-14 20:35:12 - Completed initialization in 6 ms
+2023-02-14 20:35:12 - GET "/?name=sh+sfh+&description=sgh+frtyunrtynrt", parameters={masked}
+2023-02-14 20:35:12 - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2023-02-14 20:35:12 - View [InternalResourceView], model {}
+2023-02-14 20:35:12 - Forwarding to [index.html]
+2023-02-14 20:35:12 - "FORWARD" dispatch for GET "/index.html?name=sh+sfh+&description=sgh+frtyunrtynrt", parameters={masked}
+2023-02-14 20:35:12 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-02-14 20:35:12 - Exiting from "FORWARD" dispatch, status 200
+2023-02-14 20:35:12 - Completed 200 OK
+2023-02-14 20:35:12 - GET "/js/main.js", parameters={}
+2023-02-14 20:35:12 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-02-14 20:35:12 - Completed 200 OK
+2023-02-14 20:35:12 - GET "/js/style2.css", parameters={}
+2023-02-14 20:35:12 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-02-14 20:35:12 - Completed 200 OK
+2023-02-14 20:35:13 - GET "/stations", parameters={}
+2023-02-14 20:35:13 - Mapped to ru.rtrn.vsat.controllers.VsatController#list()
+2023-02-14 20:35:13 - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-02-14 20:35:13 - Writing [{110=Station(id=110, name=Межгорье_Ю-З, ip=10.2.111.1, value= , rele= , status= , wash=), 111=Statio (truncated)...]
+2023-02-14 20:35:13 - Completed 200 OK
+2023-02-14 20:36:54 - Starting VsatApplication using Java 18.0.2.1 with PID 8435 (/home/timurg/Документы/RTRS/vsat/target/classes started by timurg in /home/timurg/Документы/RTRS/vsat)
+2023-02-14 20:36:54 - No active profile set, falling back to 1 default profile: "default"
+2023-02-14 20:36:54 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-14 20:36:54 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-14 20:36:56 - Tomcat initialized with port(s): 8088 (http)
+2023-02-14 20:36:56 - Starting service [Tomcat]
+2023-02-14 20:36:56 - Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-02-14 20:36:56 - Initializing Spring embedded WebApplicationContext
+2023-02-14 20:36:56 - Root WebApplicationContext: initialization completed in 1965 ms
+2023-02-14 20:36:56 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-02-14 20:36:57 - Adding welcome page: class path resource [static/index.html]
+2023-02-14 20:36:57 - 6 mappings in 'requestMappingHandlerMapping'
+2023-02-14 20:36:57 - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-02-14 20:36:57 - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-02-14 20:36:57 - LiveReload server is running on port 35729
+2023-02-14 20:36:57 - Tomcat started on port(s): 8088 (http) with context path ''
+2023-02-14 20:36:57 - Started VsatApplication in 4.445 seconds (process running for 5.379)
+2023-02-14 20:37:03 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-14 20:37:03 - Initializing Servlet 'dispatcherServlet'
+2023-02-14 20:37:03 - Detected StandardServletMultipartResolver
+2023-02-14 20:37:03 - Detected AcceptHeaderLocaleResolver
+2023-02-14 20:37:03 - Detected FixedThemeResolver
+2023-02-14 20:37:03 - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@728435f8
+2023-02-14 20:37:03 - Detected org.springframework.web.servlet.support.SessionFlashMapManager@691ffb20
+2023-02-14 20:37:03 - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-02-14 20:37:03 - Completed initialization in 4 ms
+2023-02-14 20:37:03 - GET "/?name=sh+sfh+&description=sgh+frtyunrtynrt", parameters={masked}
+2023-02-14 20:37:03 - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2023-02-14 20:37:03 - View [InternalResourceView], model {}
+2023-02-14 20:37:03 - Forwarding to [index.html]
+2023-02-14 20:37:03 - "FORWARD" dispatch for GET "/index.html?name=sh+sfh+&description=sgh+frtyunrtynrt", parameters={masked}
+2023-02-14 20:37:03 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-02-14 20:37:03 - Exiting from "FORWARD" dispatch, status 200
+2023-02-14 20:37:04 - Completed 200 OK
+2023-02-14 20:37:04 - GET "/js/style2.css", parameters={}
+2023-02-14 20:37:04 - GET "/js/main.js", parameters={}
+2023-02-14 20:37:04 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-02-14 20:37:04 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-02-14 20:37:04 - Completed 200 OK
+2023-02-14 20:37:04 - Completed 200 OK
+2023-02-14 20:37:04 - GET "/stations", parameters={}
+2023-02-14 20:37:04 - Mapped to ru.rtrn.vsat.controllers.VsatController#list()
+2023-02-14 20:37:04 - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-02-14 20:37:04 - Writing [{110=Station(id=110, name=Межгорье_Ю-З, ip=10.2.111.1, value= , rele= , status= , wash=), 111=Statio (truncated)...]
+2023-02-14 20:37:04 - Completed 200 OK
+2023-02-14 20:37:06 - PUT "/stations/1", parameters={}
+2023-02-14 20:37:06 - Mapped to ru.rtrn.vsat.controllers.VsatController#update(String, String)
+2023-02-14 20:37:06 - Read "application/json;charset=UTF-8" to ["{}"]
+2023-02-14 20:37:06 - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-02-14 20:37:06 - Nothing to write: null body
+2023-02-14 20:37:06 - Completed 200 OK
+2023-02-14 21:19:29 - Starting VsatApplication using Java 18.0.2.1 with PID 12416 (/home/timurg/Документы/RTRS/vsat/target/classes started by timurg in /home/timurg/Документы/RTRS/vsat)
+2023-02-14 21:19:29 - No active profile set, falling back to 1 default profile: "default"
+2023-02-14 21:19:29 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-14 21:19:29 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-14 21:19:30 - Tomcat initialized with port(s): 8088 (http)
+2023-02-14 21:19:30 - Starting service [Tomcat]
+2023-02-14 21:19:30 - Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-02-14 21:19:31 - Initializing Spring embedded WebApplicationContext
+2023-02-14 21:19:31 - Root WebApplicationContext: initialization completed in 1233 ms
+2023-02-14 21:19:31 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-02-14 21:19:31 - Adding welcome page: class path resource [static/index.html]
+2023-02-14 21:19:31 - 6 mappings in 'requestMappingHandlerMapping'
+2023-02-14 21:19:31 - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-02-14 21:19:31 - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-02-14 21:19:31 - LiveReload server is running on port 35729
+2023-02-14 21:19:31 - Tomcat started on port(s): 8088 (http) with context path ''
+2023-02-14 21:19:31 - Started VsatApplication in 2.842 seconds (process running for 3.461)
+2023-02-14 21:19:38 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-14 21:19:38 - Initializing Servlet 'dispatcherServlet'
+2023-02-14 21:19:38 - Detected StandardServletMultipartResolver
+2023-02-14 21:19:38 - Detected AcceptHeaderLocaleResolver
+2023-02-14 21:19:38 - Detected FixedThemeResolver
+2023-02-14 21:19:38 - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@71e454d1
+2023-02-14 21:19:38 - Detected org.springframework.web.servlet.support.SessionFlashMapManager@41979daa
+2023-02-14 21:19:38 - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-02-14 21:19:38 - Completed initialization in 2 ms
+2023-02-14 21:19:38 - GET "/?name=sh+sfh+&description=sgh+frtyunrtynrt", parameters={masked}
+2023-02-14 21:19:38 - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2023-02-14 21:19:38 - View [InternalResourceView], model {}
+2023-02-14 21:19:38 - Forwarding to [index.html]
+2023-02-14 21:19:38 - "FORWARD" dispatch for GET "/index.html?name=sh+sfh+&description=sgh+frtyunrtynrt", parameters={masked}
+2023-02-14 21:19:38 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-02-14 21:19:38 - Exiting from "FORWARD" dispatch, status 200
+2023-02-14 21:19:38 - Completed 200 OK
+2023-02-14 21:19:38 - GET "/js/main.js", parameters={}
+2023-02-14 21:19:38 - GET "/js/style2.css", parameters={}
+2023-02-14 21:19:38 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-02-14 21:19:38 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-02-14 21:19:38 - Completed 200 OK
+2023-02-14 21:19:38 - Completed 200 OK
+2023-02-14 21:19:39 - GET "/stations", parameters={}
+2023-02-14 21:19:39 - Mapped to ru.rtrn.vsat.controllers.VsatController#list()
+2023-02-14 21:19:39 - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-02-14 21:19:39 - Writing [{110=Station(id=110, name=Межгорье_Ю-З, ip=10.2.111.1, value= , rele= , status= , wash=), 111=Statio (truncated)...]
+2023-02-14 21:19:39 - Completed 200 OK
+2023-02-14 21:19:41 - PUT "/stations/1", parameters={}
+2023-02-14 21:19:41 - Mapped to ru.rtrn.vsat.controllers.VsatController#update(String, String)
+2023-02-14 21:19:41 - Read "application/json;charset=UTF-8" to ["{}"]
+2023-02-14 21:19:41 - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-02-14 21:19:41 - Nothing to write: null body
+2023-02-14 21:19:41 - Completed 200 OK
+2023-02-14 21:27:01 - Starting VsatApplication using Java 18.0.2.1 with PID 13781 (/home/timurg/Документы/RTRS/vsat/target/classes started by timurg in /home/timurg/Документы/RTRS/vsat)
+2023-02-14 21:27:01 - No active profile set, falling back to 1 default profile: "default"
+2023-02-14 21:27:01 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-14 21:27:01 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-14 21:27:02 - Tomcat initialized with port(s): 8088 (http)
+2023-02-14 21:27:02 - Starting service [Tomcat]
+2023-02-14 21:27:02 - Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-02-14 21:27:02 - Initializing Spring embedded WebApplicationContext
+2023-02-14 21:27:02 - Root WebApplicationContext: initialization completed in 1275 ms
+2023-02-14 21:27:03 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-02-14 21:27:03 - Adding welcome page: class path resource [static/index.html]
+2023-02-14 21:27:03 - 6 mappings in 'requestMappingHandlerMapping'
+2023-02-14 21:27:03 - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-02-14 21:27:03 - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-02-14 21:27:03 - LiveReload server is running on port 35729
+2023-02-14 21:27:03 - Tomcat started on port(s): 8088 (http) with context path ''
+2023-02-14 21:27:03 - Started VsatApplication in 2.759 seconds (process running for 3.393)
+2023-02-14 21:27:09 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-14 21:27:09 - Initializing Servlet 'dispatcherServlet'
+2023-02-14 21:27:09 - Detected StandardServletMultipartResolver
+2023-02-14 21:27:09 - Detected AcceptHeaderLocaleResolver
+2023-02-14 21:27:09 - Detected FixedThemeResolver
+2023-02-14 21:27:09 - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@31f0e41f
+2023-02-14 21:27:09 - Detected org.springframework.web.servlet.support.SessionFlashMapManager@e0e1fb0
+2023-02-14 21:27:09 - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-02-14 21:27:09 - Completed initialization in 2 ms
+2023-02-14 21:27:09 - GET "/?name=sh+sfh+&description=sgh+frtyunrtynrt", parameters={masked}
+2023-02-14 21:27:09 - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2023-02-14 21:27:09 - View [InternalResourceView], model {}
+2023-02-14 21:27:09 - Forwarding to [index.html]
+2023-02-14 21:27:09 - "FORWARD" dispatch for GET "/index.html?name=sh+sfh+&description=sgh+frtyunrtynrt", parameters={masked}
+2023-02-14 21:27:09 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-02-14 21:27:09 - Exiting from "FORWARD" dispatch, status 200
+2023-02-14 21:27:09 - Completed 200 OK
+2023-02-14 21:27:09 - GET "/js/style2.css", parameters={}
+2023-02-14 21:27:09 - GET "/js/main.js", parameters={}
+2023-02-14 21:27:09 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-02-14 21:27:09 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-02-14 21:27:09 - Completed 200 OK
+2023-02-14 21:27:09 - Completed 200 OK
+2023-02-14 21:27:10 - GET "/stations", parameters={}
+2023-02-14 21:27:10 - Mapped to ru.rtrn.vsat.controllers.VsatController#list()
+2023-02-14 21:27:10 - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-02-14 21:27:10 - Writing [{110=Station(id=110, name=Межгорье_Ю-З, ip=10.2.111.1, value= , rele= , status= , wash=), 111=Statio (truncated)...]
+2023-02-14 21:27:10 - Completed 200 OK
+2023-02-14 21:27:12 - PUT "/stations/2", parameters={}
+2023-02-14 21:27:12 - Mapped to ru.rtrn.vsat.controllers.VsatController#update(String, String)
+2023-02-14 21:27:12 - Read "application/json;charset=UTF-8" to ["{}"]
+2023-02-14 21:27:12 - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-02-14 21:27:12 - Nothing to write: null body
+2023-02-14 21:27:12 - Completed 200 OK
+2023-02-14 21:32:57 - Starting VsatApplication using Java 18.0.2.1 with PID 14831 (/home/timurg/Документы/RTRS/vsat/target/classes started by timurg in /home/timurg/Документы/RTRS/vsat)
+2023-02-14 21:32:57 - No active profile set, falling back to 1 default profile: "default"
+2023-02-14 21:32:57 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-14 21:32:57 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-14 21:32:58 - Tomcat initialized with port(s): 8088 (http)
+2023-02-14 21:32:58 - Starting service [Tomcat]
+2023-02-14 21:32:58 - Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-02-14 21:32:58 - Initializing Spring embedded WebApplicationContext
+2023-02-14 21:32:58 - Root WebApplicationContext: initialization completed in 1382 ms
+2023-02-14 21:32:59 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-02-14 21:32:59 - Adding welcome page: class path resource [static/index.html]
+2023-02-14 21:32:59 - 6 mappings in 'requestMappingHandlerMapping'
+2023-02-14 21:32:59 - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-02-14 21:32:59 - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-02-14 21:32:59 - LiveReload server is running on port 35729
+2023-02-14 21:32:59 - Tomcat started on port(s): 8088 (http) with context path ''
+2023-02-14 21:32:59 - Started VsatApplication in 2.832 seconds (process running for 3.407)
+2023-02-14 21:33:04 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-14 21:33:04 - Initializing Servlet 'dispatcherServlet'
+2023-02-14 21:33:04 - Detected StandardServletMultipartResolver
+2023-02-14 21:33:04 - Detected AcceptHeaderLocaleResolver
+2023-02-14 21:33:04 - Detected FixedThemeResolver
+2023-02-14 21:33:04 - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@27ac4077
+2023-02-14 21:33:04 - Detected org.springframework.web.servlet.support.SessionFlashMapManager@264157e0
+2023-02-14 21:33:04 - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-02-14 21:33:04 - Completed initialization in 2 ms
+2023-02-14 21:33:04 - GET "/?name=sh+sfh+&description=sgh+frtyunrtynrt", parameters={masked}
+2023-02-14 21:33:04 - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2023-02-14 21:33:04 - View [InternalResourceView], model {}
+2023-02-14 21:33:04 - Forwarding to [index.html]
+2023-02-14 21:33:04 - "FORWARD" dispatch for GET "/index.html?name=sh+sfh+&description=sgh+frtyunrtynrt", parameters={masked}
+2023-02-14 21:33:04 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-02-14 21:33:04 - Exiting from "FORWARD" dispatch, status 200
+2023-02-14 21:33:04 - Completed 200 OK
+2023-02-14 21:33:04 - GET "/js/style2.css", parameters={}
+2023-02-14 21:33:04 - GET "/js/main.js", parameters={}
+2023-02-14 21:33:04 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-02-14 21:33:04 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-02-14 21:33:04 - Completed 200 OK
+2023-02-14 21:33:04 - Completed 200 OK
+2023-02-14 21:33:04 - GET "/stations", parameters={}
+2023-02-14 21:33:04 - Mapped to ru.rtrn.vsat.controllers.VsatController#list()
+2023-02-14 21:33:04 - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-02-14 21:33:04 - Writing [{110=Station(id=110, name=Межгорье_Ю-З, ip=10.2.111.1, value= , rele= , status= , wash=), 111=Statio (truncated)...]
+2023-02-14 21:33:04 - Completed 200 OK
+2023-02-14 21:33:07 - PUT "/stations/1", parameters={}
+2023-02-14 21:33:07 - Mapped to ru.rtrn.vsat.controllers.VsatController#update(String, String)
+2023-02-14 21:33:07 - Read "application/json;charset=UTF-8" to ["{"id":"1","name":"Абдрахимово","ip":"10.2.2.1","value":" ","rele":" ","status":" ","wash":""}"]
+2023-02-14 21:33:07 - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-02-14 21:33:07 - Nothing to write: null body
+2023-02-14 21:33:07 - Completed 200 OK
+2023-02-14 21:35:30 - Starting VsatApplication using Java 18.0.2.1 with PID 15357 (/home/timurg/Документы/RTRS/vsat/target/classes started by timurg in /home/timurg/Документы/RTRS/vsat)
+2023-02-14 21:35:30 - No active profile set, falling back to 1 default profile: "default"
+2023-02-14 21:35:30 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-14 21:35:30 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-14 21:35:31 - Tomcat initialized with port(s): 8088 (http)
+2023-02-14 21:35:31 - Starting service [Tomcat]
+2023-02-14 21:35:31 - Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-02-14 21:35:31 - Initializing Spring embedded WebApplicationContext
+2023-02-14 21:35:31 - Root WebApplicationContext: initialization completed in 1216 ms
+2023-02-14 21:35:32 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-02-14 21:35:32 - Adding welcome page: class path resource [static/index.html]
+2023-02-14 21:35:32 - 6 mappings in 'requestMappingHandlerMapping'
+2023-02-14 21:35:32 - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-02-14 21:35:32 - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-02-14 21:35:32 - LiveReload server is running on port 35729
+2023-02-14 21:35:32 - Tomcat started on port(s): 8088 (http) with context path ''
+2023-02-14 21:35:32 - Started VsatApplication in 2.672 seconds (process running for 3.26)
+2023-02-14 21:35:40 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-14 21:35:40 - Initializing Servlet 'dispatcherServlet'
+2023-02-14 21:35:40 - Detected StandardServletMultipartResolver
+2023-02-14 21:35:40 - Detected AcceptHeaderLocaleResolver
+2023-02-14 21:35:40 - Detected FixedThemeResolver
+2023-02-14 21:35:40 - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@2bf83bcf
+2023-02-14 21:35:40 - Detected org.springframework.web.servlet.support.SessionFlashMapManager@531c3db0
+2023-02-14 21:35:40 - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-02-14 21:35:40 - Completed initialization in 5 ms
+2023-02-14 21:35:40 - GET "/?name=sh+sfh+&description=sgh+frtyunrtynrt", parameters={masked}
+2023-02-14 21:35:40 - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2023-02-14 21:35:40 - View [InternalResourceView], model {}
+2023-02-14 21:35:40 - Forwarding to [index.html]
+2023-02-14 21:35:40 - "FORWARD" dispatch for GET "/index.html?name=sh+sfh+&description=sgh+frtyunrtynrt", parameters={masked}
+2023-02-14 21:35:40 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-02-14 21:35:40 - Exiting from "FORWARD" dispatch, status 200
+2023-02-14 21:35:40 - Completed 200 OK
+2023-02-14 21:35:40 - GET "/js/style2.css", parameters={}
+2023-02-14 21:35:40 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-02-14 21:35:40 - GET "/js/main.js", parameters={}
+2023-02-14 21:35:40 - Completed 200 OK
+2023-02-14 21:35:40 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-02-14 21:35:40 - Completed 200 OK
+2023-02-14 21:35:40 - GET "/stations", parameters={}
+2023-02-14 21:35:40 - Mapped to ru.rtrn.vsat.controllers.VsatController#list()
+2023-02-14 21:35:40 - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-02-14 21:35:40 - Writing [{110=Station(id=110, name=Межгорье_Ю-З, ip=10.2.111.1, value= , rele= , status= , wash=), 111=Statio (truncated)...]
+2023-02-14 21:35:40 - Completed 200 OK
+2023-02-14 21:35:41 - PUT "/stations/1", parameters={}
+2023-02-14 21:35:41 - Mapped to ru.rtrn.vsat.controllers.VsatController#update(String, String)
+2023-02-14 21:35:41 - Read "application/json;charset=UTF-8" to ["{"id":"1","name":"Абдрахимово","ip":"10.2.2.1","value":" ","rele":" ","status":" ","wash":""}"]
+2023-02-14 21:35:41 - Using 'application/json', given [application/json, text/plain, */*] and supported [text/plain, */*, application/json, application/*+json]
+2023-02-14 21:35:41 - Writing ["{"id":"1","name":"Абдрахимово","ip":"10.2.2.1","value":" ","rele":" ","status":" ","wash":""}"]
+2023-02-14 21:35:41 - Completed 200 OK
+2023-02-14 21:37:25 - Starting VsatApplication using Java 18.0.2.1 with PID 15781 (/home/timurg/Документы/RTRS/vsat/target/classes started by timurg in /home/timurg/Документы/RTRS/vsat)
+2023-02-14 21:37:25 - No active profile set, falling back to 1 default profile: "default"
+2023-02-14 21:37:25 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-14 21:37:25 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-14 21:37:26 - Tomcat initialized with port(s): 8088 (http)
+2023-02-14 21:37:26 - Starting service [Tomcat]
+2023-02-14 21:37:26 - Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-02-14 21:37:26 - Initializing Spring embedded WebApplicationContext
+2023-02-14 21:37:26 - Root WebApplicationContext: initialization completed in 1199 ms
+2023-02-14 21:37:27 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-02-14 21:37:27 - Adding welcome page: class path resource [static/index.html]
+2023-02-14 21:37:27 - 6 mappings in 'requestMappingHandlerMapping'
+2023-02-14 21:37:27 - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-02-14 21:37:27 - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-02-14 21:37:27 - LiveReload server is running on port 35729
+2023-02-14 21:37:27 - Tomcat started on port(s): 8088 (http) with context path ''
+2023-02-14 21:37:27 - Started VsatApplication in 2.664 seconds (process running for 3.188)
+2023-02-14 21:37:33 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-14 21:37:33 - Initializing Servlet 'dispatcherServlet'
+2023-02-14 21:37:33 - Detected StandardServletMultipartResolver
+2023-02-14 21:37:33 - Detected AcceptHeaderLocaleResolver
+2023-02-14 21:37:33 - Detected FixedThemeResolver
+2023-02-14 21:37:33 - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@2bf83bcf
+2023-02-14 21:37:33 - Detected org.springframework.web.servlet.support.SessionFlashMapManager@531c3db0
+2023-02-14 21:37:33 - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-02-14 21:37:33 - Completed initialization in 2 ms
+2023-02-14 21:37:33 - GET "/?name=sh+sfh+&description=sgh+frtyunrtynrt", parameters={masked}
+2023-02-14 21:37:33 - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2023-02-14 21:37:33 - View [InternalResourceView], model {}
+2023-02-14 21:37:33 - Forwarding to [index.html]
+2023-02-14 21:37:33 - "FORWARD" dispatch for GET "/index.html?name=sh+sfh+&description=sgh+frtyunrtynrt", parameters={masked}
+2023-02-14 21:37:33 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-02-14 21:37:33 - Exiting from "FORWARD" dispatch, status 200
+2023-02-14 21:37:33 - Completed 200 OK
+2023-02-14 21:37:33 - GET "/js/style2.css", parameters={}
+2023-02-14 21:37:33 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-02-14 21:37:33 - GET "/js/main.js", parameters={}
+2023-02-14 21:37:33 - Completed 200 OK
+2023-02-14 21:37:33 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-02-14 21:37:33 - Completed 200 OK
+2023-02-14 21:37:33 - GET "/stations", parameters={}
+2023-02-14 21:37:33 - Mapped to ru.rtrn.vsat.controllers.VsatController#list()
+2023-02-14 21:37:33 - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-02-14 21:37:33 - Writing [{110=Station(id=110, name=Межгорье_Ю-З, ip=10.2.111.1, value= , rele= , status= , wash=), 111=Statio (truncated)...]
+2023-02-14 21:37:33 - Completed 200 OK
+2023-02-14 21:37:35 - PUT "/stations/1", parameters={}
+2023-02-14 21:37:35 - Mapped to ru.rtrn.vsat.controllers.VsatController#update(String, String)
+2023-02-14 21:37:35 - Read "application/json;charset=UTF-8" to ["{"id":"1","name":"Абдрахимово","ip":"10.2.2.1","value":" ","rele":" ","status":" ","wash":""}"]
+2023-02-14 21:37:35 - Using 'application/json', given [application/json, text/plain, */*] and supported [text/plain, */*, application/json, application/*+json]
+2023-02-14 21:37:35 - Writing ["{"id":"1","name":"Абдрахимово","ip":"10.2.2.1","value":" ","rele":" ","status":" ","wash":""}"]
+2023-02-14 21:37:35 - Completed 200 OK
+2023-02-14 21:39:28 - Starting VsatApplication using Java 18.0.2.1 with PID 16228 (/home/timurg/Документы/RTRS/vsat/target/classes started by timurg in /home/timurg/Документы/RTRS/vsat)
+2023-02-14 21:39:28 - No active profile set, falling back to 1 default profile: "default"
+2023-02-14 21:39:28 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-14 21:39:28 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-14 21:39:29 - Tomcat initialized with port(s): 8088 (http)
+2023-02-14 21:39:29 - Starting service [Tomcat]
+2023-02-14 21:39:29 - Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-02-14 21:39:29 - Initializing Spring embedded WebApplicationContext
+2023-02-14 21:39:29 - Root WebApplicationContext: initialization completed in 1189 ms
+2023-02-14 21:39:29 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-02-14 21:39:29 - Adding welcome page: class path resource [static/index.html]
+2023-02-14 21:39:30 - 6 mappings in 'requestMappingHandlerMapping'
+2023-02-14 21:39:30 - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-02-14 21:39:30 - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-02-14 21:39:30 - LiveReload server is running on port 35729
+2023-02-14 21:39:30 - Tomcat started on port(s): 8088 (http) with context path ''
+2023-02-14 21:39:30 - Started VsatApplication in 2.732 seconds (process running for 3.354)
+2023-02-14 21:39:34 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-14 21:39:34 - Initializing Servlet 'dispatcherServlet'
+2023-02-14 21:39:34 - Detected StandardServletMultipartResolver
+2023-02-14 21:39:34 - Detected AcceptHeaderLocaleResolver
+2023-02-14 21:39:34 - Detected FixedThemeResolver
+2023-02-14 21:39:34 - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@31f0e41f
+2023-02-14 21:39:34 - Detected org.springframework.web.servlet.support.SessionFlashMapManager@e0e1fb0
+2023-02-14 21:39:34 - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-02-14 21:39:34 - Completed initialization in 3 ms
+2023-02-14 21:39:34 - GET "/?name=sh+sfh+&description=sgh+frtyunrtynrt", parameters={masked}
+2023-02-14 21:39:34 - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2023-02-14 21:39:34 - View [InternalResourceView], model {}
+2023-02-14 21:39:34 - Forwarding to [index.html]
+2023-02-14 21:39:34 - "FORWARD" dispatch for GET "/index.html?name=sh+sfh+&description=sgh+frtyunrtynrt", parameters={masked}
+2023-02-14 21:39:34 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-02-14 21:39:34 - Exiting from "FORWARD" dispatch, status 200
+2023-02-14 21:39:34 - Completed 200 OK
+2023-02-14 21:39:34 - GET "/js/main.js", parameters={}
+2023-02-14 21:39:34 - GET "/js/style2.css", parameters={}
+2023-02-14 21:39:34 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-02-14 21:39:34 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-02-14 21:39:34 - Completed 200 OK
+2023-02-14 21:39:34 - Completed 200 OK
+2023-02-14 21:39:34 - GET "/stations", parameters={}
+2023-02-14 21:39:34 - Mapped to ru.rtrn.vsat.controllers.VsatController#list()
+2023-02-14 21:39:34 - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-02-14 21:39:34 - Writing [{110=Station(id=110, name=Межгорье_Ю-З, ip=10.2.111.1, value= , rele= , status= , wash=), 111=Statio (truncated)...]
+2023-02-14 21:39:34 - Completed 200 OK
+2023-02-14 21:39:35 - PUT "/stations/1", parameters={}
+2023-02-14 21:39:35 - Mapped to ru.rtrn.vsat.controllers.VsatController#update(String, String)
+2023-02-14 21:39:35 - Read "application/json;charset=UTF-8" to ["{"id":"1","name":"Абдрахимово","ip":"10.2.2.1","value":" ","rele":" ","status":" ","wash":""}"]
+2023-02-14 21:39:35 - Using 'application/json', given [application/json, text/plain, */*] and supported [text/plain, */*, application/json, application/*+json]
+2023-02-14 21:39:35 - Writing ["{"id":"1","name":"Абдрахимово","ip":"10.2.2.1","value":" ","rele":" ","status":" ","wash":""}"]
+2023-02-14 21:39:35 - Completed 200 OK
+2023-02-14 21:40:36 - Starting VsatApplication using Java 18.0.2.1 with PID 16524 (/home/timurg/Документы/RTRS/vsat/target/classes started by timurg in /home/timurg/Документы/RTRS/vsat)
+2023-02-14 21:40:36 - No active profile set, falling back to 1 default profile: "default"
+2023-02-14 21:40:36 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-14 21:40:36 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-14 21:40:37 - Tomcat initialized with port(s): 8088 (http)
+2023-02-14 21:40:37 - Starting service [Tomcat]
+2023-02-14 21:40:37 - Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-02-14 21:40:37 - Initializing Spring embedded WebApplicationContext
+2023-02-14 21:40:37 - Root WebApplicationContext: initialization completed in 1180 ms
+2023-02-14 21:40:38 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-02-14 21:40:38 - Adding welcome page: class path resource [static/index.html]
+2023-02-14 21:40:38 - 6 mappings in 'requestMappingHandlerMapping'
+2023-02-14 21:40:38 - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-02-14 21:40:38 - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-02-14 21:40:38 - LiveReload server is running on port 35729
+2023-02-14 21:40:38 - Tomcat started on port(s): 8088 (http) with context path ''
+2023-02-14 21:40:38 - Started VsatApplication in 2.576 seconds (process running for 3.1)
+2023-02-14 21:40:43 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-14 21:40:43 - Initializing Servlet 'dispatcherServlet'
+2023-02-14 21:40:43 - Detected StandardServletMultipartResolver
+2023-02-14 21:40:43 - Detected AcceptHeaderLocaleResolver
+2023-02-14 21:40:43 - Detected FixedThemeResolver
+2023-02-14 21:40:43 - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@201ebac5
+2023-02-14 21:40:43 - Detected org.springframework.web.servlet.support.SessionFlashMapManager@18dee529
+2023-02-14 21:40:43 - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-02-14 21:40:43 - Completed initialization in 3 ms
+2023-02-14 21:40:43 - GET "/?name=sh+sfh+&description=sgh+frtyunrtynrt", parameters={masked}
+2023-02-14 21:40:43 - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2023-02-14 21:40:43 - View [InternalResourceView], model {}
+2023-02-14 21:40:43 - Forwarding to [index.html]
+2023-02-14 21:40:43 - "FORWARD" dispatch for GET "/index.html?name=sh+sfh+&description=sgh+frtyunrtynrt", parameters={masked}
+2023-02-14 21:40:43 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-02-14 21:40:43 - Exiting from "FORWARD" dispatch, status 200
+2023-02-14 21:40:43 - Completed 200 OK
+2023-02-14 21:40:43 - GET "/js/style2.css", parameters={}
+2023-02-14 21:40:43 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-02-14 21:40:43 - GET "/js/main.js", parameters={}
+2023-02-14 21:40:43 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-02-14 21:40:43 - Completed 200 OK
+2023-02-14 21:40:43 - Completed 200 OK
+2023-02-14 21:40:43 - GET "/stations", parameters={}
+2023-02-14 21:40:43 - Mapped to ru.rtrn.vsat.controllers.VsatController#list()
+2023-02-14 21:40:43 - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-02-14 21:40:43 - Writing [{110=Station(id=110, name=Межгорье_Ю-З, ip=10.2.111.1, value= , rele= , status= , wash=), 111=Statio (truncated)...]
+2023-02-14 21:40:44 - Completed 200 OK
+2023-02-14 21:40:45 - PUT "/stations/1", parameters={}
+2023-02-14 21:40:45 - Mapped to ru.rtrn.vsat.controllers.VsatController#update(String, String)
+2023-02-14 21:40:45 - Read "application/json;charset=UTF-8" to ["{"id":"1","name":"Абдрахимово","ip":"10.2.2.1","value":" ","rele":" ","status":" ","wash":""}"]
+2023-02-14 21:40:45 - Using 'application/json', given [application/json, text/plain, */*] and supported [text/plain, */*, application/json, application/*+json]
+2023-02-14 21:40:45 - Writing ["{"id":"1","name":"Абдрахимово","ip":"10.2.2.1","value":" ","rele":" ","status":" ","wash":""}"]
+2023-02-14 21:40:45 - Completed 200 OK
+2023-02-14 21:40:52 - PUT "/stations/1", parameters={}
+2023-02-14 21:40:52 - Mapped to ru.rtrn.vsat.controllers.VsatController#update(String, String)
+2023-02-14 21:40:52 - Read "application/json;charset=UTF-8" to ["{"id":"1","name":"Абдрахимово","ip":"10.2.2.1","value":" ","rele":" ","status":" ","wash":""}"]
+2023-02-14 21:40:52 - Using 'application/json', given [application/json, text/plain, */*] and supported [text/plain, */*, application/json, application/*+json]
+2023-02-14 21:40:52 - Writing ["{"id":"1","name":"Абдрахимово","ip":"10.2.2.1","value":" ","rele":" ","status":" ","wash":""}"]
+2023-02-14 21:40:52 - Completed 200 OK
+2023-02-14 21:40:53 - PUT "/stations/1", parameters={}
+2023-02-14 21:40:53 - Mapped to ru.rtrn.vsat.controllers.VsatController#update(String, String)
+2023-02-14 21:40:53 - Read "application/json;charset=UTF-8" to ["{"id":"1","name":"Абдрахимово","ip":"10.2.2.1","value":" ","rele":" ","status":" ","wash":""}"]
+2023-02-14 21:40:53 - Using 'application/json', given [application/json, text/plain, */*] and supported [text/plain, */*, application/json, application/*+json]
+2023-02-14 21:40:53 - Writing ["{"id":"1","name":"Абдрахимово","ip":"10.2.2.1","value":" ","rele":" ","status":" ","wash":""}"]
+2023-02-14 21:40:53 - Completed 200 OK
+2023-02-14 21:41:12 - PUT "/stations/5", parameters={}
+2023-02-14 21:41:12 - Mapped to ru.rtrn.vsat.controllers.VsatController#update(String, String)
+2023-02-14 21:41:12 - Read "application/json;charset=UTF-8" to ["{"id":"5","name":"Абзаново","ip":"10.2.6.1","value":" ","rele":" ","status":" ","wash":""}"]
+2023-02-14 21:41:12 - Using 'application/json', given [application/json, text/plain, */*] and supported [text/plain, */*, application/json, application/*+json]
+2023-02-14 21:41:12 - Writing ["{"id":"5","name":"Абзаново","ip":"10.2.6.1","value":" ","rele":" ","status":" ","wash":""}"]
+2023-02-14 21:41:12 - Completed 200 OK
+2023-02-14 21:41:16 - PUT "/stations/8", parameters={}
+2023-02-14 21:41:16 - Mapped to ru.rtrn.vsat.controllers.VsatController#update(String, String)
+2023-02-14 21:41:16 - Read "application/json;charset=UTF-8" to ["{"id":"8","name":"Аксаитово","ip":"10.2.9.1","value":" ","rele":" ","status":" ","wash":""}"]
+2023-02-14 21:41:16 - Using 'application/json', given [application/json, text/plain, */*] and supported [text/plain, */*, application/json, application/*+json]
+2023-02-14 21:41:16 - Writing ["{"id":"8","name":"Аксаитово","ip":"10.2.9.1","value":" ","rele":" ","status":" ","wash":""}"]
+2023-02-14 21:41:16 - Completed 200 OK
+2023-02-14 21:41:20 - PUT "/stations/4", parameters={}
+2023-02-14 21:41:20 - Mapped to ru.rtrn.vsat.controllers.VsatController#update(String, String)
+2023-02-14 21:41:20 - Read "application/json;charset=UTF-8" to ["{"id":"4","name":"Абзаково","ip":"10.2.5.1","value":" ","rele":" ","status":" ","wash":""}"]
+2023-02-14 21:41:20 - Using 'application/json', given [application/json, text/plain, */*] and supported [text/plain, */*, application/json, application/*+json]
+2023-02-14 21:41:20 - Writing ["{"id":"4","name":"Абзаково","ip":"10.2.5.1","value":" ","rele":" ","status":" ","wash":""}"]
+2023-02-14 21:41:20 - Completed 200 OK
+2023-02-14 21:41:22 - PUT "/stations/19", parameters={}
+2023-02-14 21:41:22 - Mapped to ru.rtrn.vsat.controllers.VsatController#update(String, String)
+2023-02-14 21:41:22 - Read "application/json;charset=UTF-8" to ["{"id":"19","name":"Баймак","ip":"10.2.19.1","value":" ","rele":" ","status":" ","wash":""}"]
+2023-02-14 21:41:22 - Using 'application/json', given [application/json, text/plain, */*] and supported [text/plain, */*, application/json, application/*+json]
+2023-02-14 21:41:22 - Writing ["{"id":"19","name":"Баймак","ip":"10.2.19.1","value":" ","rele":" ","status":" ","wash":""}"]
+2023-02-14 21:41:22 - Completed 200 OK
+2023-02-14 22:03:07 - Starting VsatApplication using Java 18.0.2.1 with PID 20189 (/home/timurg/Документы/RTRS/vsat/target/classes started by timurg in /home/timurg/Документы/RTRS/vsat)
+2023-02-14 22:03:07 - No active profile set, falling back to 1 default profile: "default"
+2023-02-14 22:03:07 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-14 22:03:07 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-14 22:03:08 - Tomcat initialized with port(s): 8088 (http)
+2023-02-14 22:03:09 - Starting service [Tomcat]
+2023-02-14 22:03:09 - Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-02-14 22:03:09 - Initializing Spring embedded WebApplicationContext
+2023-02-14 22:03:09 - Root WebApplicationContext: initialization completed in 1263 ms
+2023-02-14 22:03:09 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-02-14 22:03:09 - Adding welcome page: class path resource [static/index.html]
+2023-02-14 22:03:09 - 6 mappings in 'requestMappingHandlerMapping'
+2023-02-14 22:03:09 - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-02-14 22:03:09 - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-02-14 22:03:09 - LiveReload server is running on port 35729
+2023-02-14 22:03:09 - Tomcat started on port(s): 8088 (http) with context path ''
+2023-02-14 22:03:09 - Started VsatApplication in 2.749 seconds (process running for 3.298)
+2023-02-14 22:03:14 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-14 22:03:14 - Initializing Servlet 'dispatcherServlet'
+2023-02-14 22:03:14 - Detected StandardServletMultipartResolver
+2023-02-14 22:03:14 - Detected AcceptHeaderLocaleResolver
+2023-02-14 22:03:14 - Detected FixedThemeResolver
+2023-02-14 22:03:14 - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@106a1426
+2023-02-14 22:03:14 - Detected org.springframework.web.servlet.support.SessionFlashMapManager@750daa05
+2023-02-14 22:03:14 - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-02-14 22:03:14 - Completed initialization in 2 ms
+2023-02-14 22:03:14 - GET "/?name=sh+sfh+&description=sgh+frtyunrtynrt", parameters={masked}
+2023-02-14 22:03:14 - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2023-02-14 22:03:14 - View [InternalResourceView], model {}
+2023-02-14 22:03:14 - Forwarding to [index.html]
+2023-02-14 22:03:14 - "FORWARD" dispatch for GET "/index.html?name=sh+sfh+&description=sgh+frtyunrtynrt", parameters={masked}
+2023-02-14 22:03:14 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-02-14 22:03:14 - Exiting from "FORWARD" dispatch, status 200
+2023-02-14 22:03:14 - Completed 200 OK
+2023-02-14 22:03:14 - GET "/js/main.js", parameters={}
+2023-02-14 22:03:14 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-02-14 22:03:14 - GET "/js/style2.css", parameters={}
+2023-02-14 22:03:14 - Completed 200 OK
+2023-02-14 22:03:14 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-02-14 22:03:14 - Completed 200 OK
+2023-02-14 22:03:14 - GET "/stations", parameters={}
+2023-02-14 22:03:14 - Mapped to ru.rtrn.vsat.controllers.VsatController#list()
+2023-02-14 22:03:14 - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-02-14 22:03:14 - Writing [{110=Station(id=110, name=Межгорье_Ю-З, ip=10.2.111.1, value= , rele= , status= , wash=), 111=Statio (truncated)...]
+2023-02-14 22:03:14 - Completed 200 OK
+2023-02-14 22:04:29 - Starting VsatApplication using Java 18.0.2.1 with PID 20529 (/home/timurg/Документы/RTRS/vsat/target/classes started by timurg in /home/timurg/Документы/RTRS/vsat)
+2023-02-14 22:04:29 - No active profile set, falling back to 1 default profile: "default"
+2023-02-14 22:04:29 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-14 22:04:29 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-14 22:04:31 - Tomcat initialized with port(s): 8088 (http)
+2023-02-14 22:04:31 - Starting service [Tomcat]
+2023-02-14 22:04:31 - Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-02-14 22:04:31 - Initializing Spring embedded WebApplicationContext
+2023-02-14 22:04:31 - Root WebApplicationContext: initialization completed in 1437 ms
+2023-02-14 22:04:31 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-02-14 22:04:31 - Adding welcome page: class path resource [static/index.html]
+2023-02-14 22:04:31 - 6 mappings in 'requestMappingHandlerMapping'
+2023-02-14 22:04:31 - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-02-14 22:04:31 - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-02-14 22:04:31 - LiveReload server is running on port 35729
+2023-02-14 22:04:31 - Tomcat started on port(s): 8088 (http) with context path ''
+2023-02-14 22:04:31 - Started VsatApplication in 2.937 seconds (process running for 4.194)
+2023-02-14 22:04:43 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-14 22:04:43 - Initializing Servlet 'dispatcherServlet'
+2023-02-14 22:04:43 - Detected StandardServletMultipartResolver
+2023-02-14 22:04:43 - Detected AcceptHeaderLocaleResolver
+2023-02-14 22:04:43 - Detected FixedThemeResolver
+2023-02-14 22:04:43 - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@49c5156d
+2023-02-14 22:04:43 - Detected org.springframework.web.servlet.support.SessionFlashMapManager@796c3f9d
+2023-02-14 22:04:43 - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-02-14 22:04:43 - Completed initialization in 3 ms
+2023-02-14 22:04:43 - GET "/?name=sh+sfh+&description=sgh+frtyunrtynrt", parameters={masked}
+2023-02-14 22:04:43 - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2023-02-14 22:04:43 - View [InternalResourceView], model {}
+2023-02-14 22:04:43 - Forwarding to [index.html]
+2023-02-14 22:04:43 - "FORWARD" dispatch for GET "/index.html?name=sh+sfh+&description=sgh+frtyunrtynrt", parameters={masked}
+2023-02-14 22:04:43 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-02-14 22:04:43 - Exiting from "FORWARD" dispatch, status 200
+2023-02-14 22:04:43 - Completed 200 OK
+2023-02-14 22:04:43 - GET "/js/style2.css", parameters={}
+2023-02-14 22:04:43 - GET "/js/main.js", parameters={}
+2023-02-14 22:04:43 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-02-14 22:04:43 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-02-14 22:04:43 - Completed 200 OK
+2023-02-14 22:04:43 - Completed 200 OK
+2023-02-14 22:04:44 - GET "/stations", parameters={}
+2023-02-14 22:04:44 - Mapped to ru.rtrn.vsat.controllers.VsatController#list()
+2023-02-14 22:04:44 - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-02-14 22:04:44 - Writing [{110=Station(id=110, name=Межгорье_Ю-З, ip=10.2.111.1, value= , rele= , status= , wash=), 111=Statio (truncated)...]
+2023-02-14 22:04:44 - Completed 200 OK
+2023-02-14 22:04:47 - PUT "/stations/2", parameters={}
+2023-02-14 22:04:47 - Mapped to ru.rtrn.vsat.controllers.VsatController#update(String, String)
+2023-02-14 22:04:47 - Read "application/json;charset=UTF-8" to ["{"id":"2","name":"Абдуллино","ip":"10.2.3.1","value":" ","rele":" ","status":" ","wash":""}"]
+2023-02-14 22:04:50 - 10.2.3.1 -  : stop washing
+2023-02-14 22:04:50 - Using 'application/json', given [application/json, text/plain, */*] and supported [text/plain, */*, application/json, application/*+json]
+2023-02-14 22:04:50 - Writing ["{"id":"2","name":"Абдуллино","ip":"10.2.3.1","value":" ","rele":" ","status":" ","wash":""}"]
+2023-02-14 22:04:50 - Completed 200 OK
+2023-02-14 22:06:38 - Starting VsatApplication using Java 18.0.2.1 with PID 20966 (/home/timurg/Документы/RTRS/vsat/target/classes started by timurg in /home/timurg/Документы/RTRS/vsat)
+2023-02-14 22:06:38 - No active profile set, falling back to 1 default profile: "default"
+2023-02-14 22:06:38 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-14 22:06:38 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-14 22:06:40 - Tomcat initialized with port(s): 8088 (http)
+2023-02-14 22:06:40 - Starting service [Tomcat]
+2023-02-14 22:06:40 - Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-02-14 22:06:40 - Initializing Spring embedded WebApplicationContext
+2023-02-14 22:06:40 - Root WebApplicationContext: initialization completed in 1528 ms
+2023-02-14 22:06:41 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-02-14 22:06:41 - Adding welcome page: class path resource [static/index.html]
+2023-02-14 22:06:41 - 6 mappings in 'requestMappingHandlerMapping'
+2023-02-14 22:06:41 - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-02-14 22:06:41 - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-02-14 22:06:41 - LiveReload server is running on port 35729
+2023-02-14 22:06:41 - Tomcat started on port(s): 8088 (http) with context path ''
+2023-02-14 22:06:41 - Started VsatApplication in 3.308 seconds (process running for 4.135)
+2023-02-14 22:06:45 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-14 22:06:45 - Initializing Servlet 'dispatcherServlet'
+2023-02-14 22:06:45 - Detected StandardServletMultipartResolver
+2023-02-14 22:06:45 - Detected AcceptHeaderLocaleResolver
+2023-02-14 22:06:45 - Detected FixedThemeResolver
+2023-02-14 22:06:45 - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@8d9e93a
+2023-02-14 22:06:45 - Detected org.springframework.web.servlet.support.SessionFlashMapManager@4013b13
+2023-02-14 22:06:45 - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-02-14 22:06:45 - Completed initialization in 2 ms
+2023-02-14 22:06:45 - GET "/?name=sh+sfh+&description=sgh+frtyunrtynrt", parameters={masked}
+2023-02-14 22:06:45 - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2023-02-14 22:06:45 - View [InternalResourceView], model {}
+2023-02-14 22:06:45 - Forwarding to [index.html]
+2023-02-14 22:06:45 - "FORWARD" dispatch for GET "/index.html?name=sh+sfh+&description=sgh+frtyunrtynrt", parameters={masked}
+2023-02-14 22:06:45 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-02-14 22:06:45 - Exiting from "FORWARD" dispatch, status 200
+2023-02-14 22:06:45 - Completed 200 OK
+2023-02-14 22:06:46 - GET "/js/style2.css", parameters={}
+2023-02-14 22:06:46 - GET "/js/main.js", parameters={}
+2023-02-14 22:06:46 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-02-14 22:06:46 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-02-14 22:06:46 - Completed 200 OK
+2023-02-14 22:06:46 - Completed 200 OK
+2023-02-14 22:06:46 - GET "/stations", parameters={}
+2023-02-14 22:06:46 - Mapped to ru.rtrn.vsat.controllers.VsatController#list()
+2023-02-14 22:06:46 - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-02-14 22:06:46 - Writing [{110=Station(id=110, name=Межгорье_Ю-З, ip=10.2.111.1, value= , rele= , status= , wash=), 111=Statio (truncated)...]
+2023-02-14 22:06:46 - Completed 200 OK
+2023-02-14 22:06:48 - PUT "/stations/2", parameters={}
+2023-02-14 22:06:48 - Mapped to ru.rtrn.vsat.controllers.VsatController#update(String, String)
+2023-02-14 22:06:48 - Read "application/json;charset=UTF-8" to ["{"id":"2","name":"Абдуллино","ip":"10.2.3.1","value":" ","rele":" ","status":" ","wash":""}"]
+2023-02-14 22:06:51 - 10.2.3.1 -  : stop washing
+2023-02-14 22:06:51 - Using 'application/json', given [application/json, text/plain, */*] and supported [text/plain, */*, application/json, application/*+json]
+2023-02-14 22:06:51 - Writing ["Station(id=2, name=Абдуллино, ip=10.2.3.1, value= , rele=Error, status=Ok, wash=)"]
+2023-02-14 22:06:51 - Completed 200 OK
+2023-02-14 22:09:55 - PUT "/stations/2", parameters={}
+2023-02-14 22:09:55 - Mapped to ru.rtrn.vsat.controllers.VsatController#update(String, String)
+2023-02-14 22:09:55 - Read "application/json;charset=UTF-8" to ["{"id":"2","name":"Абдуллино","ip":"10.2.3.1","value":" ","rele":" ","status":" ","wash":""}"]
+2023-02-14 22:09:58 - 10.2.3.1 -  : stop washing
+2023-02-14 22:09:58 - Using 'application/json', given [application/json, text/plain, */*] and supported [text/plain, */*, application/json, application/*+json]
+2023-02-14 22:09:58 - Writing ["Station(id=2, name=Абдуллино, ip=10.2.3.1, value= , rele=Error, status=Ok, wash=)"]
+2023-02-14 22:09:58 - Completed 200 OK
+2023-02-14 22:11:45 - Starting VsatApplication using Java 18.0.2.1 with PID 21911 (/home/timurg/Документы/RTRS/vsat/target/classes started by timurg in /home/timurg/Документы/RTRS/vsat)
+2023-02-14 22:11:45 - No active profile set, falling back to 1 default profile: "default"
+2023-02-14 22:11:45 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-14 22:11:45 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-14 22:11:46 - Tomcat initialized with port(s): 8088 (http)
+2023-02-14 22:11:46 - Starting service [Tomcat]
+2023-02-14 22:11:46 - Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-02-14 22:11:47 - Initializing Spring embedded WebApplicationContext
+2023-02-14 22:11:47 - Root WebApplicationContext: initialization completed in 1338 ms
+2023-02-14 22:11:47 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-02-14 22:11:47 - Adding welcome page: class path resource [static/index.html]
+2023-02-14 22:11:47 - 6 mappings in 'requestMappingHandlerMapping'
+2023-02-14 22:11:47 - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-02-14 22:11:47 - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-02-14 22:11:47 - LiveReload server is running on port 35729
+2023-02-14 22:11:47 - Tomcat started on port(s): 8088 (http) with context path ''
+2023-02-14 22:11:47 - Started VsatApplication in 2.993 seconds (process running for 3.716)
+2023-02-14 22:11:52 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-14 22:11:52 - Initializing Servlet 'dispatcherServlet'
+2023-02-14 22:11:52 - Detected StandardServletMultipartResolver
+2023-02-14 22:11:52 - Detected AcceptHeaderLocaleResolver
+2023-02-14 22:11:52 - Detected FixedThemeResolver
+2023-02-14 22:11:52 - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@38192c5d
+2023-02-14 22:11:52 - Detected org.springframework.web.servlet.support.SessionFlashMapManager@3b94d0a
+2023-02-14 22:11:52 - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-02-14 22:11:52 - Completed initialization in 3 ms
+2023-02-14 22:11:52 - GET "/?name=sh+sfh+&description=sgh+frtyunrtynrt", parameters={masked}
+2023-02-14 22:11:52 - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2023-02-14 22:11:52 - View [InternalResourceView], model {}
+2023-02-14 22:11:52 - Forwarding to [index.html]
+2023-02-14 22:11:52 - "FORWARD" dispatch for GET "/index.html?name=sh+sfh+&description=sgh+frtyunrtynrt", parameters={masked}
+2023-02-14 22:11:52 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-02-14 22:11:52 - Exiting from "FORWARD" dispatch, status 200
+2023-02-14 22:11:52 - Completed 200 OK
+2023-02-14 22:11:52 - GET "/js/style2.css", parameters={}
+2023-02-14 22:11:52 - GET "/js/main.js", parameters={}
+2023-02-14 22:11:52 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-02-14 22:11:52 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-02-14 22:11:52 - Completed 200 OK
+2023-02-14 22:11:52 - Completed 200 OK
+2023-02-14 22:11:52 - GET "/stations", parameters={}
+2023-02-14 22:11:52 - Mapped to ru.rtrn.vsat.controllers.VsatController#list()
+2023-02-14 22:11:52 - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-02-14 22:11:52 - Writing [{110=Station(id=110, name=Межгорье_Ю-З, ip=10.2.111.1, value= , rele= , status= , wash=), 111=Statio (truncated)...]
+2023-02-14 22:11:52 - Completed 200 OK
+2023-02-14 22:11:53 - PUT "/stations/1", parameters={}
+2023-02-14 22:11:53 - Mapped to ru.rtrn.vsat.controllers.VsatController#update(String, String)
+2023-02-14 22:11:53 - Read "application/json;charset=UTF-8" to ["{"id":"1","name":"Абдрахимово","ip":"10.2.2.1","value":" ","rele":" ","status":" ","wash":""}"]
+2023-02-14 22:11:57 - 10.2.2.1 -  : stop washing
+2023-02-14 22:11:57 - Using 'application/json', given [application/json, text/plain, */*] and supported [text/plain, */*, application/json, application/*+json]
+2023-02-14 22:11:57 - Writing ["Station(id=1, name=Абдрахимово, ip=10.2.2.1, value= , rele=Error, status=Sleep, wash=)"]
+2023-02-14 22:11:57 - Completed 200 OK
+2023-02-14 22:12:10 - PUT "/stations/1", parameters={}
+2023-02-14 22:12:10 - Mapped to ru.rtrn.vsat.controllers.VsatController#update(String, String)
+2023-02-14 22:12:10 - Read "application/json;charset=UTF-8" to ["{"id":"1","name":"Абдрахимово","ip":"10.2.2.1","value":" ","rele":" ","status":" ","wash":""}"]
+2023-02-14 22:12:10 - Using 'application/json', given [application/json, text/plain, */*] and supported [text/plain, */*, application/json, application/*+json]
+2023-02-14 22:12:10 - Writing ["Station(id=1, name=Абдрахимово, ip=10.2.2.1, value= , rele=Error, status=Ready, wash=)"]
+2023-02-14 22:12:10 - Completed 200 OK
+2023-02-14 22:13:27 - Starting VsatApplication using Java 18.0.2.1 with PID 22298 (/home/timurg/Документы/RTRS/vsat/target/classes started by timurg in /home/timurg/Документы/RTRS/vsat)
+2023-02-14 22:13:27 - No active profile set, falling back to 1 default profile: "default"
+2023-02-14 22:13:27 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-14 22:13:27 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-14 22:13:28 - Tomcat initialized with port(s): 8088 (http)
+2023-02-14 22:13:28 - Starting service [Tomcat]
+2023-02-14 22:13:28 - Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-02-14 22:13:28 - Initializing Spring embedded WebApplicationContext
+2023-02-14 22:13:28 - Root WebApplicationContext: initialization completed in 1421 ms
+2023-02-14 22:13:29 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-02-14 22:13:29 - Adding welcome page: class path resource [static/index.html]
+2023-02-14 22:13:29 - 6 mappings in 'requestMappingHandlerMapping'
+2023-02-14 22:13:29 - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-02-14 22:13:29 - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-02-14 22:13:29 - LiveReload server is running on port 35729
+2023-02-14 22:13:29 - Tomcat started on port(s): 8088 (http) with context path ''
+2023-02-14 22:13:29 - Started VsatApplication in 3.09 seconds (process running for 3.896)
+2023-02-14 22:13:30 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-14 22:13:30 - Initializing Servlet 'dispatcherServlet'
+2023-02-14 22:13:30 - Detected StandardServletMultipartResolver
+2023-02-14 22:13:30 - Detected AcceptHeaderLocaleResolver
+2023-02-14 22:13:30 - Detected FixedThemeResolver
+2023-02-14 22:13:30 - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@5cb69fd8
+2023-02-14 22:13:30 - Detected org.springframework.web.servlet.support.SessionFlashMapManager@132f93
+2023-02-14 22:13:30 - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-02-14 22:13:30 - Completed initialization in 2 ms
+2023-02-14 22:13:30 - GET "/?name=sh+sfh+&description=sgh+frtyunrtynrt", parameters={masked}
+2023-02-14 22:13:30 - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2023-02-14 22:13:30 - View [InternalResourceView], model {}
+2023-02-14 22:13:30 - Forwarding to [index.html]
+2023-02-14 22:13:30 - "FORWARD" dispatch for GET "/index.html?name=sh+sfh+&description=sgh+frtyunrtynrt", parameters={masked}
+2023-02-14 22:13:30 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-02-14 22:13:31 - Exiting from "FORWARD" dispatch, status 200
+2023-02-14 22:13:31 - Completed 200 OK
+2023-02-14 22:13:31 - GET "/js/main.js", parameters={}
+2023-02-14 22:13:31 - GET "/js/style2.css", parameters={}
+2023-02-14 22:13:31 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-02-14 22:13:31 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-02-14 22:13:31 - Completed 200 OK
+2023-02-14 22:13:31 - Completed 200 OK
+2023-02-14 22:13:31 - GET "/stations", parameters={}
+2023-02-14 22:13:31 - Mapped to ru.rtrn.vsat.controllers.VsatController#list()
+2023-02-14 22:13:31 - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-02-14 22:13:31 - Writing [{110=Station(id=110, name=Межгорье_Ю-З, ip=10.2.111.1, value= , rele= , status= , wash=), 111=Statio (truncated)...]
+2023-02-14 22:13:31 - Completed 200 OK
+2023-02-14 22:13:32 - PUT "/stations/8", parameters={}
+2023-02-14 22:13:32 - Mapped to ru.rtrn.vsat.controllers.VsatController#update(String, String)
+2023-02-14 22:13:33 - Read "application/json;charset=UTF-8" to ["{"id":"8","name":"Аксаитово","ip":"10.2.9.1","value":" ","rele":" ","status":" ","wash":""}"]
+2023-02-14 22:13:36 - 10.2.9.1 -  : stop washing
+2023-02-14 22:13:36 - Using 'application/json', given [application/json, text/plain, */*] and supported [text/plain, */*, application/json, application/*+json]
+2023-02-14 22:13:36 - Writing ["Station(id=8, name=Аксаитово, ip=10.2.9.1, value= , rele=Error, status=Sleep, wash=)"]
+2023-02-14 22:13:36 - Completed 200 OK
+2023-02-14 22:13:44 - PUT "/stations/8", parameters={}
+2023-02-14 22:13:44 - Mapped to ru.rtrn.vsat.controllers.VsatController#update(String, String)
+2023-02-14 22:13:44 - Read "application/json;charset=UTF-8" to ["{"id":"8","name":"Аксаитово","ip":"10.2.9.1","value":" ","rele":" ","status":" ","wash":""}"]
+2023-02-14 22:13:44 - Using 'application/json', given [application/json, text/plain, */*] and supported [text/plain, */*, application/json, application/*+json]
+2023-02-14 22:13:44 - Writing ["Station(id=8, name=Аксаитово, ip=10.2.9.1, value= , rele=Error, status=Ready, wash=)"]
+2023-02-14 22:13:44 - Completed 200 OK
+2023-02-14 22:16:13 - Starting VsatApplication using Java 18.0.2.1 with PID 22938 (/home/timurg/Документы/RTRS/vsat/target/classes started by timurg in /home/timurg/Документы/RTRS/vsat)
+2023-02-14 22:16:13 - No active profile set, falling back to 1 default profile: "default"
+2023-02-14 22:16:13 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-14 22:16:13 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-14 22:16:14 - Tomcat initialized with port(s): 8088 (http)
+2023-02-14 22:16:14 - Starting service [Tomcat]
+2023-02-14 22:16:14 - Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-02-14 22:16:14 - Initializing Spring embedded WebApplicationContext
+2023-02-14 22:16:14 - Root WebApplicationContext: initialization completed in 1412 ms
+2023-02-14 22:16:15 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-02-14 22:16:15 - Adding welcome page: class path resource [static/index.html]
+2023-02-14 22:16:15 - 6 mappings in 'requestMappingHandlerMapping'
+2023-02-14 22:16:15 - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-02-14 22:16:15 - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-02-14 22:16:15 - LiveReload server is running on port 35729
+2023-02-14 22:16:15 - Tomcat started on port(s): 8088 (http) with context path ''
+2023-02-14 22:16:15 - Started VsatApplication in 3.054 seconds (process running for 3.74)
+2023-02-14 22:16:19 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-14 22:16:19 - Initializing Servlet 'dispatcherServlet'
+2023-02-14 22:16:19 - Detected StandardServletMultipartResolver
+2023-02-14 22:16:19 - Detected AcceptHeaderLocaleResolver
+2023-02-14 22:16:19 - Detected FixedThemeResolver
+2023-02-14 22:16:19 - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@493af40a
+2023-02-14 22:16:19 - Detected org.springframework.web.servlet.support.SessionFlashMapManager@7b340838
+2023-02-14 22:16:19 - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-02-14 22:16:19 - Completed initialization in 2 ms
+2023-02-14 22:16:19 - GET "/?name=sh+sfh+&description=sgh+frtyunrtynrt", parameters={masked}
+2023-02-14 22:16:19 - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2023-02-14 22:16:19 - View [InternalResourceView], model {}
+2023-02-14 22:16:19 - Forwarding to [index.html]
+2023-02-14 22:16:19 - "FORWARD" dispatch for GET "/index.html?name=sh+sfh+&description=sgh+frtyunrtynrt", parameters={masked}
+2023-02-14 22:16:19 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-02-14 22:16:19 - Exiting from "FORWARD" dispatch, status 200
+2023-02-14 22:16:19 - Completed 200 OK
+2023-02-14 22:16:19 - GET "/js/style2.css", parameters={}
+2023-02-14 22:16:19 - GET "/js/main.js", parameters={}
+2023-02-14 22:16:19 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-02-14 22:16:19 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-02-14 22:16:19 - Completed 200 OK
+2023-02-14 22:16:19 - Completed 200 OK
+2023-02-14 22:16:19 - GET "/stations", parameters={}
+2023-02-14 22:16:19 - Mapped to ru.rtrn.vsat.controllers.VsatController#list()
+2023-02-14 22:16:19 - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-02-14 22:16:19 - Writing [{110=Station(id=110, name=Межгорье_Ю-З, ip=10.2.111.1, value= , rele= , status= ), 111=Station(id=11 (truncated)...]
+2023-02-14 22:16:19 - Completed 200 OK
+2023-02-14 22:16:22 - PUT "/stations/2", parameters={}
+2023-02-14 22:16:22 - Mapped to ru.rtrn.vsat.controllers.VsatController#update(String, String)
+2023-02-14 22:16:22 - Read "application/json;charset=UTF-8" to ["{"id":"2","name":"Абдуллино","ip":"10.2.3.1","value":" ","rele":" ","status":" "}"]
+2023-02-14 22:16:24 - GET "/?name=sh+sfh+&description=sgh+frtyunrtynrt", parameters={masked}
+2023-02-14 22:16:24 - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2023-02-14 22:16:24 - View [InternalResourceView], model {}
+2023-02-14 22:16:24 - Forwarding to [index.html]
+2023-02-14 22:16:24 - "FORWARD" dispatch for GET "/index.html?name=sh+sfh+&description=sgh+frtyunrtynrt", parameters={masked}
+2023-02-14 22:16:24 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-02-14 22:16:24 - Exiting from "FORWARD" dispatch, status 200
+2023-02-14 22:16:24 - Completed 200 OK
+2023-02-14 22:16:24 - GET "/js/style2.css", parameters={}
+2023-02-14 22:16:24 - GET "/js/main.js", parameters={}
+2023-02-14 22:16:24 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-02-14 22:16:24 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-02-14 22:16:24 - Completed 200 OK
+2023-02-14 22:16:24 - Completed 200 OK
+2023-02-14 22:16:24 - GET "/stations", parameters={}
+2023-02-14 22:16:24 - Mapped to ru.rtrn.vsat.controllers.VsatController#list()
+2023-02-14 22:16:24 - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-02-14 22:16:24 - Writing [{110=Station(id=110, name=Межгорье_Ю-З, ip=10.2.111.1, value= , rele= , status= ), 111=Station(id=11 (truncated)...]
+2023-02-14 22:16:24 - Completed 200 OK
+2023-02-14 22:16:25 - 10.2.3.1 -  : stop washing
+2023-02-14 22:16:25 - Using 'application/json', given [application/json, text/plain, */*] and supported [text/plain, */*, application/json, application/*+json]
+2023-02-14 22:16:25 - Writing ["Station(id=2, name=Абдуллино, ip=10.2.3.1, value= , rele=Error, status=Sleep)"]
+2023-02-14 22:16:25 - Completed 200 OK
+2023-02-14 22:16:26 - PUT "/stations/3", parameters={}
+2023-02-14 22:16:26 - Mapped to ru.rtrn.vsat.controllers.VsatController#update(String, String)
+2023-02-14 22:16:26 - Read "application/json;charset=UTF-8" to ["{"id":"3","name":"Абдулово","ip":"10.2.4.1","value":" ","rele":" ","status":" "}"]
+2023-02-14 22:16:29 - GET "/?name=sh+sfh+&description=sgh+frtyunrtynrt", parameters={masked}
+2023-02-14 22:16:29 - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2023-02-14 22:16:29 - View [InternalResourceView], model {}
+2023-02-14 22:16:29 - Forwarding to [index.html]
+2023-02-14 22:16:29 - "FORWARD" dispatch for GET "/index.html?name=sh+sfh+&description=sgh+frtyunrtynrt", parameters={masked}
+2023-02-14 22:16:29 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-02-14 22:16:29 - Exiting from "FORWARD" dispatch, status 200
+2023-02-14 22:16:29 - Completed 200 OK
+2023-02-14 22:16:29 - 10.2.4.1 -  : stop washing
+2023-02-14 22:16:29 - Using 'application/json', given [application/json, text/plain, */*] and supported [text/plain, */*, application/json, application/*+json]
+2023-02-14 22:16:29 - Writing ["Station(id=3, name=Абдулово, ip=10.2.4.1, value= , rele=Error, status=Sleep)"]
+2023-02-14 22:16:29 - Completed 200 OK
+2023-02-14 22:16:29 - GET "/js/style2.css", parameters={}
+2023-02-14 22:16:29 - GET "/js/main.js", parameters={}
+2023-02-14 22:16:29 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-02-14 22:16:29 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-02-14 22:16:29 - Completed 200 OK
+2023-02-14 22:16:29 - Completed 200 OK
+2023-02-14 22:16:29 - GET "/stations", parameters={}
+2023-02-14 22:16:29 - Mapped to ru.rtrn.vsat.controllers.VsatController#list()
+2023-02-14 22:16:29 - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-02-14 22:16:29 - Writing [{110=Station(id=110, name=Межгорье_Ю-З, ip=10.2.111.1, value= , rele= , status= ), 111=Station(id=11 (truncated)...]
+2023-02-14 22:16:29 - Completed 200 OK
+2023-02-14 22:16:34 - GET "/?name=sh+sfh+&description=sgh+frtyunrtynrt", parameters={masked}
+2023-02-14 22:16:34 - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2023-02-14 22:16:34 - View [InternalResourceView], model {}
+2023-02-14 22:16:34 - Forwarding to [index.html]
+2023-02-14 22:16:34 - "FORWARD" dispatch for GET "/index.html?name=sh+sfh+&description=sgh+frtyunrtynrt", parameters={masked}
+2023-02-14 22:16:34 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-02-14 22:16:34 - Exiting from "FORWARD" dispatch, status 200
+2023-02-14 22:16:34 - Completed 200 OK
+2023-02-14 22:16:34 - GET "/js/style2.css", parameters={}
+2023-02-14 22:16:34 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-02-14 22:16:34 - GET "/js/main.js", parameters={}
+2023-02-14 22:16:34 - Completed 200 OK
+2023-02-14 22:16:34 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-02-14 22:16:34 - Completed 200 OK
+2023-02-14 22:16:35 - GET "/stations", parameters={}
+2023-02-14 22:16:35 - Mapped to ru.rtrn.vsat.controllers.VsatController#list()
+2023-02-14 22:16:35 - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-02-14 22:16:35 - Writing [{110=Station(id=110, name=Межгорье_Ю-З, ip=10.2.111.1, value= , rele= , status= ), 111=Station(id=11 (truncated)...]
+2023-02-14 22:16:35 - Completed 200 OK
+2023-02-14 22:16:40 - GET "/?name=sh+sfh+&description=sgh+frtyunrtynrt", parameters={masked}
+2023-02-14 22:16:40 - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2023-02-14 22:16:40 - View [InternalResourceView], model {}
+2023-02-14 22:16:40 - Forwarding to [index.html]
+2023-02-14 22:16:40 - "FORWARD" dispatch for GET "/index.html?name=sh+sfh+&description=sgh+frtyunrtynrt", parameters={masked}
+2023-02-14 22:16:40 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-02-14 22:16:40 - Exiting from "FORWARD" dispatch, status 200
+2023-02-14 22:16:40 - Completed 200 OK
+2023-02-14 22:16:40 - GET "/js/style2.css", parameters={}
+2023-02-14 22:16:40 - GET "/js/main.js", parameters={}
+2023-02-14 22:16:40 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-02-14 22:16:40 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-02-14 22:16:40 - Completed 200 OK
+2023-02-14 22:16:40 - Completed 200 OK
+2023-02-14 22:16:40 - GET "/stations", parameters={}
+2023-02-14 22:16:40 - Mapped to ru.rtrn.vsat.controllers.VsatController#list()
+2023-02-14 22:16:40 - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-02-14 22:16:40 - Writing [{110=Station(id=110, name=Межгорье_Ю-З, ip=10.2.111.1, value= , rele= , status= ), 111=Station(id=11 (truncated)...]
+2023-02-14 22:16:40 - Completed 200 OK
+2023-02-14 22:16:45 - GET "/?name=sh+sfh+&description=sgh+frtyunrtynrt", parameters={masked}
+2023-02-14 22:16:45 - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2023-02-14 22:16:45 - View [InternalResourceView], model {}
+2023-02-14 22:16:45 - Forwarding to [index.html]
+2023-02-14 22:16:45 - "FORWARD" dispatch for GET "/index.html?name=sh+sfh+&description=sgh+frtyunrtynrt", parameters={masked}
+2023-02-14 22:16:45 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-02-14 22:16:45 - Exiting from "FORWARD" dispatch, status 200
+2023-02-14 22:16:45 - Completed 200 OK
+2023-02-14 22:16:45 - GET "/js/style2.css", parameters={}
+2023-02-14 22:16:45 - GET "/js/main.js", parameters={}
+2023-02-14 22:16:45 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-02-14 22:16:45 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-02-14 22:16:45 - Completed 200 OK
+2023-02-14 22:16:45 - Completed 200 OK
+2023-02-14 22:16:45 - GET "/stations", parameters={}
+2023-02-14 22:16:45 - Mapped to ru.rtrn.vsat.controllers.VsatController#list()
+2023-02-14 22:16:45 - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-02-14 22:16:45 - Writing [{110=Station(id=110, name=Межгорье_Ю-З, ip=10.2.111.1, value= , rele= , status= ), 111=Station(id=11 (truncated)...]
+2023-02-14 22:16:45 - Completed 200 OK

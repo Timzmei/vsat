@@ -43,7 +43,7 @@ public class StationService {
         String line = reader.readLine();
         while (line != null) {
             String[] split = line.split(" ");
-            Station station = new Station(split[0], split[1], split[2], " ", " ", " ", "");
+            Station station = new Station(split[0], split[1], split[2], " ", " ", " ");
             stations.add(station);
             mapStations.put(split[0], station);
             line = reader.readLine();
@@ -154,12 +154,16 @@ public class StationService {
     }
 
     public void stopWashing(String number) throws IOException, InterruptedException {
-        Station alarmStation = mapStations.get(number);
-        SnmpSevice[] snmpSeviceSdk = new SnmpSevice[1];
-        snmpSeviceSdk[0] = new SnmpSevice();
-        Device sdk = new Sdk();
-        setStationStatus(alarmStation.getId(), "Ok");
-        washing(alarmStation, snmpSeviceSdk[0], sdk, 0, ": stop washing");
+        if (mapStations.get(number).getStatus().equals("Sleep")) {
+            setStationStatus(number, "Ready");
+        } else {
+            Station alarmStation = mapStations.get(number);
+            SnmpSevice[] snmpSeviceSdk = new SnmpSevice[1];
+            snmpSeviceSdk[0] = new SnmpSevice();
+            Device sdk = new Sdk();
+            setStationStatus(alarmStation.getId(), "Sleep");
+            washing(alarmStation, snmpSeviceSdk[0], sdk, 0, ": stop washing");
+        }
     }
 
     private static String getNewIp(Station alarmStation) {
