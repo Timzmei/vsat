@@ -7,8 +7,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import ru.rtrn.vsat.httpReq.SimpleRequest;
-import ru.rtrn.vsat.services.SnmpSevice;
 import ru.rtrn.vsat.services.StationService;
 
 import java.io.IOException;
@@ -16,10 +14,7 @@ import java.io.IOException;
 @Controller
 @RequiredArgsConstructor
 public class VsatController {
-    @Autowired
-    private SimpleRequest simpleRequest;
-    @Autowired
-    private SnmpSevice snmpSevice;
+
     @Autowired
     private StationService stationService;
 

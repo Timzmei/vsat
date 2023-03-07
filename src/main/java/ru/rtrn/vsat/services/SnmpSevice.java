@@ -8,11 +8,8 @@ import org.snmp4j.event.ResponseEvent;
 import org.snmp4j.mp.SnmpConstants;
 import org.snmp4j.smi.*;
 import org.snmp4j.transport.DefaultUdpTransportMapping;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ru.rtrn.vsat.entities.Device;
-import ru.rtrn.vsat.gui.Gui;
-
 import java.io.IOException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
